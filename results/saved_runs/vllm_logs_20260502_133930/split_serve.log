@@ -1,0 +1,16 @@
+nohup: ignoring input
+========================================================
+Cluster Setup | Controller IP: localhost
+========================================================
+[启动] VLLM Controller (Port 8005)...
+ -> PID: 2595450
+[启动] Role EH (GPU: 0, TP: 1)...
+ -> PID: 2595687
+[启动] Role CB (GPU: 2,7, TP: 2)...
+ -> PID: 2595690
+[启动] Role ET (GPU: 1, TP: 1)...
+ -> PID: 2596002
+服务已在后台运行。按 Ctrl+C 停止所有服务...
+
+[33m[System] 正在停止本地服务...[0m
+[32m[System] 已停止。[0m
