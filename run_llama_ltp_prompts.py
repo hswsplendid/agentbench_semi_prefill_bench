@@ -26,9 +26,9 @@ Explain the information gain of the next question, including what you would infe
 Ask exactly ONE yes/no question.
 
 WORKLOAD REQUIREMENT:
-- Each turn should be a focused reasoning trace, normally 1000-1500 tokens when the context allows.
+- Each turn should be a focused reasoning trace, normally 1800-2200 tokens when the context allows.
 - Write clear, content-rich explanations under every section without excessive repetition.
-- Prefer adding enough analysis that the next turn's input context grows by roughly 1000-1500 tokens before compression.
+- Prefer adding enough analysis that the next turn's input context grows by roughly 1800-2200 tokens before compression.
 - Do not answer with a short question only; keep the full structure every turn.
 - Continue exploring and verifying even when a likely solution emerges.
 
@@ -55,10 +55,10 @@ RULES:
 4. "Irrelevant." = the question doesn't relate to the key elements of the answer
 5. You must NEVER say "Correct" or confirm the player has solved it — that is the game master's job.
 6. Do NOT reveal the answer or give hints. Only respond to their questions.
-7. After your verdict, provide a 2-3 sentence explanation of why you answered that way, referencing the story elements without revealing the full answer.
+7. After your verdict, provide a 3-5 sentence explanation of why you answered that way, referencing the story elements without revealing the full answer.
 8. If the player gives a final guess, evaluate each part against the Answer keys and respond Yes/No/Irrelevant accordingly.
 9. Keep the explanation brief but informative — never reveal the hidden answer directly.
-10. When context allows, make the explanation 200-400 tokens: briefly explain why this verdict follows from the story and which alternative explanations remain plausible. Do not reveal hidden answer facts directly.
+10. When context allows, make the explanation 600-900 tokens: explain why this verdict follows from the story, what the question touches, what it misses, and which alternative explanations remain plausible. Do not reveal hidden answer facts directly.
 
 STORY: {story}
 

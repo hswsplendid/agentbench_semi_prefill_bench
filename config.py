@@ -146,7 +146,7 @@ def get_analysis_dir() -> Path:
 # Model-specific settings
 # ============================================================
 TEMPERATURE = 0.0
-MAX_TOKENS = 2048
+MAX_TOKENS = 3072
 STREAM_MAX_RETRIES = 2
 STREAM_RETRY_BACKOFF_S = 1.0
 

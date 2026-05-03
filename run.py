@@ -90,7 +90,7 @@ def check_health(api_base: str = None, verbose: bool = True) -> tuple:
 
 AGENT_LONG_OUTPUT_CONTROL = """Benchmark control instruction for this turn:
 - Continue the lateral-thinking puzzle from the latest host answer.
-- Target 1000-1500 tokens for this turn if the remaining context allows it.
+- Target 1800-2200 tokens for this turn if the remaining context allows it.
 - Use exactly these sections: Known Facts, Remaining Mysteries, Reasoning, Question Strategy, My Question.
 - Under Known Facts and Remaining Mysteries, write 5 detailed bullets each when evidence exists.
 - Under Reasoning, write at least 3 substantial paragraphs covering surface observations, leading hypothesis, alternative hypothesis, and why the next question is high value.
@@ -160,17 +160,16 @@ def run_ltp_puzzle(
     agent.init_sample(sample_id, initial_messages)
     tls = agent._tls
 
-    # Use agent messages from initialized state
-    tls.sample_messages = deepcopy(initial_messages)
-    tls.previous_summary = agent._compressor is not None and any(
-        "[Previous conversation summary]" in m.get("content", "")
-        for m in initial_messages
-    )
-    tls.compression_count = 0
-
     start_turn = tls.turn_idx  # may be >0 if resumed from checkpoint
-    if start_turn > 0:
-        print(f"    [RESUME] from turn {start_turn}/{max_turns}, compressions={tls.compression_count}")
+
+    if start_turn == 0:
+        # Fresh start — use initial messages
+        tls.sample_messages = deepcopy(initial_messages)
+        tls.previous_summary = False
+        tls.compression_count = 0
+    else:
+        print(f"    [RESUME] from turn {start_turn}/{max_turns}, "
+              f"messages={len(tls.sample_messages)}, compressions={tls.compression_count}")
 
     solved = False
     total_turns = start_turn
