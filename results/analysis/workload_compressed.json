@@ -1,0 +1,134 @@
+{
+  "mode": "compressed",
+  "num_samples": 4,
+  "num_completed": 4,
+  "workload": {
+    "turns_per_task": {
+      "min": 5,
+      "max": 24,
+      "avg": 19.25,
+      "values": [
+        24,
+        24,
+        24,
+        5
+      ]
+    },
+    "new_tokens_per_step": {
+      "min": 149,
+      "max": 3072,
+      "avg": 1971.9
+    },
+    "tool_calls_per_sample": {
+      "min": 0,
+      "max": 0,
+      "avg": 0.0
+    },
+    "context_length": {
+      "min": 1162,
+      "max": 29838,
+      "avg": 9665.2
+    },
+    "context_churn_ratio": {
+      "min": 0.0286,
+      "max": 2.4132,
+      "avg": 0.5881
+    }
+  },
+  "compression": {
+    "total_events": 11,
+    "per_sample_avg": 2.8,
+    "B2_to_B1_ratios": [
+      0.0432,
+      0.0427,
+      0.0489,
+      0.0344,
+      0.0475,
+      0.0447,
+      0.0488,
+      0.0313,
+      0.0377,
+      0.0439,
+      0.044
+    ],
+    "C1_token_range": {
+      "min": 3074,
+      "max": 3074,
+      "avg": 3074.0
+    },
+    "summary_time_s": {
+      "min": 117.1,
+      "max": 299.0,
+      "avg": 210.2
+    },
+    "B2_to_B1_ratio_stats": {
+      "min": 0.0313,
+      "max": 0.0489,
+      "avg": 0.0425,
+      "median": 0.0439
+    }
+  },
+  "semi_prefill": {
+    "total_events": 22,
+    "per_sample_avg": 5.5,
+    "tokens_per_event": {
+      "min": 1836,
+      "max": 5075,
+      "avg": 3485.0
+    }
+  },
+  "per_sample": {
+    "puzzle_0": {
+      "turns": 24,
+      "steps": 50,
+      "compressions": 3,
+      "tool_calls": 0,
+      "full_prefill_count": 2,
+      "semi_prefill_count": 6,
+      "incremental_count": 42,
+      "avg_context_length": 9546.04,
+      "max_context_length": 29706,
+      "total_new_tokens": 95687,
+      "context_churn_ratio": 0.6093940665398405
+    },
+    "puzzle_1": {
+      "turns": 24,
+      "steps": 50,
+      "compressions": 4,
+      "tool_calls": 0,
+      "full_prefill_count": 2,
+      "semi_prefill_count": 8,
+      "incremental_count": 40,
+      "avg_context_length": 9187.32,
+      "max_context_length": 28440,
+      "total_new_tokens": 105167,
+      "context_churn_ratio": 0.5686498469357176
+    },
+    "puzzle_2": {
+      "turns": 24,
+      "steps": 50,
+      "compressions": 4,
+      "tool_calls": 0,
+      "full_prefill_count": 2,
+      "semi_prefill_count": 8,
+      "incremental_count": 40,
+      "avg_context_length": 9444.02,
+      "max_context_length": 29838,
+      "total_new_tokens": 105036,
+      "context_churn_ratio": 0.6530766229259686
+    },
+    "puzzle_3": {
+      "turns": 5,
+      "steps": 10,
+      "compressions": 0,
+      "tool_calls": 0,
+      "full_prefill_count": 2,
+      "semi_prefill_count": 0,
+      "incremental_count": 8,
+      "avg_context_length": 13757.0,
+      "max_context_length": 29820,
+      "total_new_tokens": 9614,
+      "context_churn_ratio": 0.2537809421143008
+    }
+  }
+}

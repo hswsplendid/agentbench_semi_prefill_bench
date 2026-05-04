@@ -1,0 +1,246 @@
+{
+  "config": {
+    "r_pf": 0.68,
+    "r_dec": 75.0,
+    "c_fixed": 50,
+    "data_dir": "/root/agentbench_semi_prefill_bench/results/compressed",
+    "prefix_caching": false
+  },
+  "workload_stats": {
+    "0": {
+      "puzzle_id": 0,
+      "n_turns": 25,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "delta_median": 4608,
+      "delta_mean": 3678.4761904761904,
+      "delta_min": 1571,
+      "delta_max": 5375,
+      "ctx_max": 29521,
+      "ctx_min": 4983,
+      "churn_mean": 0.33619131666581764,
+      "sp_events": [
+        {
+          "turn": 3,
+          "A": 479,
+          "B1": 30106,
+          "B2": 1300,
+          "C1": 3074,
+          "B2_C1": 4374,
+          "B2_B1_ratio": 0.0432,
+          "semi_prefill_ms": 3024.32,
+          "summary_time_s": 145.708,
+          "pre_tokens": 33659,
+          "post_tokens": 4853
+        },
+        {
+          "turn": 11,
+          "A": 479,
+          "B1": 30368,
+          "B2": 1298,
+          "C1": 3074,
+          "B2_C1": 4372,
+          "B2_B1_ratio": 0.0427,
+          "semi_prefill_ms": 3022.96,
+          "summary_time_s": 284.385,
+          "pre_tokens": 33922,
+          "post_tokens": 4851
+        },
+        {
+          "turn": 17,
+          "A": 479,
+          "B1": 26663,
+          "B2": 1304,
+          "C1": 3074,
+          "B2_C1": 4378,
+          "B2_B1_ratio": 0.0489,
+          "semi_prefill_ms": 3027.0400000000004,
+          "summary_time_s": 232.446,
+          "pre_tokens": 30216,
+          "post_tokens": 4857
+        }
+      ],
+      "total_agent_chars": 230977,
+      "total_host_chars": 318201,
+      "agent_output_tok": 95687,
+      "host_output_tok": 0
+    },
+    "1": {
+      "puzzle_id": 1,
+      "n_turns": 25,
+      "n_compressions": 4,
+      "compression_rate": 0.16,
+      "delta_median": 4755.5,
+      "delta_mean": 4007.1,
+      "delta_min": 1178,
+      "delta_max": 5642,
+      "ctx_max": 28375,
+      "ctx_min": 4613,
+      "churn_mean": 0.39272698125155353,
+      "sp_events": [
+        {
+          "turn": 4,
+          "A": 470,
+          "B1": 27255,
+          "B2": 937,
+          "C1": 3074,
+          "B2_C1": 4011,
+          "B2_B1_ratio": 0.0344,
+          "semi_prefill_ms": 2777.48,
+          "summary_time_s": 120.618,
+          "pre_tokens": 30799,
+          "post_tokens": 4481
+        },
+        {
+          "turn": 10,
+          "A": 470,
+          "B1": 26908,
+          "B2": 1277,
+          "C1": 3074,
+          "B2_C1": 4351,
+          "B2_B1_ratio": 0.0475,
+          "semi_prefill_ms": 3008.6800000000003,
+          "summary_time_s": 207.853,
+          "pre_tokens": 30452,
+          "post_tokens": 4821
+        },
+        {
+          "turn": 16,
+          "A": 470,
+          "B1": 30190,
+          "B2": 1351,
+          "C1": 3074,
+          "B2_C1": 4425,
+          "B2_B1_ratio": 0.0447,
+          "semi_prefill_ms": 3059.0,
+          "summary_time_s": 239.971,
+          "pre_tokens": 33734,
+          "post_tokens": 4895
+        },
+        {
+          "turn": 22,
+          "A": 470,
+          "B1": 27808,
+          "B2": 1356,
+          "C1": 3074,
+          "B2_C1": 4430,
+          "B2_B1_ratio": 0.0488,
+          "semi_prefill_ms": 3062.4,
+          "summary_time_s": 238.693,
+          "pre_tokens": 31352,
+          "post_tokens": 4900
+        }
+      ],
+      "total_agent_chars": 230703,
+      "total_host_chars": 297060,
+      "agent_output_tok": 105167,
+      "host_output_tok": 0
+    },
+    "2": {
+      "puzzle_id": 2,
+      "n_turns": 25,
+      "n_compressions": 4,
+      "compression_rate": 0.16,
+      "delta_median": 4829.0,
+      "delta_mean": 4057.6,
+      "delta_min": 1144,
+      "delta_max": 5069,
+      "ctx_max": 29775,
+      "ctx_min": 4550,
+      "churn_mean": 0.38595908425166775,
+      "sp_events": [
+        {
+          "turn": 4,
+          "A": 494,
+          "B1": 27154,
+          "B2": 850,
+          "C1": 3074,
+          "B2_C1": 3924,
+          "B2_B1_ratio": 0.0313,
+          "semi_prefill_ms": 2718.32,
+          "summary_time_s": 117.066,
+          "pre_tokens": 30722,
+          "post_tokens": 4418
+        },
+        {
+          "turn": 10,
+          "A": 494,
+          "B1": 29534,
+          "B2": 1114,
+          "C1": 3074,
+          "B2_C1": 4188,
+          "B2_B1_ratio": 0.0377,
+          "semi_prefill_ms": 2897.84,
+          "summary_time_s": 292.334,
+          "pre_tokens": 33102,
+          "post_tokens": 4682
+        },
+        {
+          "turn": 16,
+          "A": 494,
+          "B1": 30353,
+          "B2": 1332,
+          "C1": 3074,
+          "B2_C1": 4406,
+          "B2_B1_ratio": 0.0439,
+          "semi_prefill_ms": 3046.0800000000004,
+          "summary_time_s": 299.011,
+          "pre_tokens": 33922,
+          "post_tokens": 4900
+        },
+        {
+          "turn": 22,
+          "A": 494,
+          "B1": 30353,
+          "B2": 1337,
+          "C1": 3074,
+          "B2_C1": 4411,
+          "B2_B1_ratio": 0.044,
+          "semi_prefill_ms": 3049.48,
+          "summary_time_s": 134.251,
+          "pre_tokens": 33922,
+          "post_tokens": 4905
+        }
+      ],
+      "total_agent_chars": 217729,
+      "total_host_chars": 328898,
+      "agent_output_tok": 105036,
+      "host_output_tok": 0
+    }
+  },
+  "phase_breakdown": {
+    "0": {
+      "full_prefill_ms": 14680.880000000001,
+      "incremental_prefill_ms": 263629.28,
+      "semi_prefill_ms": 10051.480000000001,
+      "decode_ms": 4128600.0,
+      "total_ms": 4416961.64,
+      "full_prefill_pct": 0.3323750848784823,
+      "incremental_prefill_pct": 5.9685662110481905,
+      "semi_prefill_pct": 0.22756548096261034,
+      "decode_pct": 93.47149322311073
+    },
+    "1": {
+      "full_prefill_ms": 14674.76,
+      "incremental_prefill_ms": 244531.80000000002,
+      "semi_prefill_ms": 13185.960000000001,
+      "decode_ms": 4348650.0,
+      "total_ms": 4621042.52,
+      "full_prefill_pct": 0.31756383838684094,
+      "incremental_prefill_pct": 5.291702011865496,
+      "semi_prefill_pct": 0.2853460002354621,
+      "decode_pct": 94.10538814951221
+    },
+    "2": {
+      "full_prefill_ms": 14691.080000000002,
+      "incremental_prefill_ms": 257065.56,
+      "semi_prefill_ms": 13055.4,
+      "decode_ms": 4705575.0,
+      "total_ms": 4990387.04,
+      "full_prefill_pct": 0.2943875872200887,
+      "incremental_prefill_pct": 5.151214884527273,
+      "semi_prefill_pct": 0.26161097116026494,
+      "decode_pct": 94.29278655709237
+    }
+  }
+}
