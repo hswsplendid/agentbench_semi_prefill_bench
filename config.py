@@ -31,6 +31,10 @@ MODEL_REGISTRY = {
         "model_path": "/root/share/models/Llama-3.3-70B-Instruct",
         "tokenizer_path": "/root/share/models/Llama-3.3-70B-Instruct",
     },
+    "GLM-4-9B-0414": {
+        "model_path": "/root/share/models/GLM-4-9B-0414",
+        "tokenizer_path": "/root/share/models/GLM-4-9B-0414",
+    },
 }
 
 DEFAULT_MODEL = "Llama-3.3-70B-Instruct"
