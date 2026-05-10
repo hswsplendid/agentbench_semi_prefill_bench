@@ -1,0 +1,4517 @@
+{
+  "dataset": {
+    "slug": "agentbench_ltp",
+    "title": "AgentBench LTP Semi-Prefill Overhead",
+    "data_root": "/root/agentbench_semi_prefill_bench/results/compressed",
+    "output_dir": "/root/agentbench_semi_prefill_bench/analysis_20260507_cw8000_reference",
+    "kind": "flat",
+    "report_name": "Semi-Prefill_Overhead分析报告_agentbench_ltp_cw8000_reference.md",
+    "caveat": "compressed 目录缺少 run_config.json；context/threshold 参数来自 /root/agentbench_semi_prefill_bench/config.py 的 32k 配置。",
+    "fallback_config": {
+      "model": "Llama-3.3-70B-Instruct",
+      "context_window": 32000,
+      "threshold": 30000,
+      "reserve_tokens": 2000,
+      "keep_recent_tokens": 2800,
+      "summary_max_tokens": 1024,
+      "config_source": "/root/agentbench_semi_prefill_bench/config.py"
+    }
+  },
+  "config": {
+    "r_pf": 0.15,
+    "r_dec": 12.0,
+    "c_fixed": 20.0
+  },
+  "aggregate": {
+    "sample_count": 12,
+    "active_sample_count": 12,
+    "compression_event_count": 37,
+    "total_rounds": 278,
+    "total_steps": 556,
+    "avg_rounds": 23.166666666666668,
+    "avg_compressions": 3.0833333333333335,
+    "compression_rate": 0.13309352517985612,
+    "avg_accumulated_context": 440442.25,
+    "avg_context_multiplier": 20.303693746529696,
+    "min_context_multiplier": 3.6227511763077773,
+    "max_context_multiplier": 23.034354133087728,
+    "avg_delta_median": 4500.0,
+    "phase_async": {
+      "full_prefill_ms": 39284.85,
+      "incremental_prefill_ms": 126733.85,
+      "semi_prefill_ms": 24997.699999999993,
+      "decode_ms": 12550716.0,
+      "total_ms": 12741732.4
+    },
+    "phase_sync": {
+      "full_prefill_ms": 39284.85,
+      "incremental_prefill_ms": 126733.85,
+      "semi_prefill_ms": 24997.699999999993,
+      "summary_prefill_ms": 159504.3,
+      "summary_decode_ms": 559572.0,
+      "decode_ms": 12550716.0,
+      "total_ms": 13460808.7
+    },
+    "baseline_ms": 12716734.7,
+    "async_overhead_pct": 0.1965732602725446,
+    "sync_overhead_pct": 5.851140387476984,
+    "avg_b2_c1": 4370.756756756757,
+    "min_b2_c1": 3485.0,
+    "max_b2_c1": 5503.0,
+    "avg_c1": 3110.4594594594596,
+    "avg_b2": 1260.2972972972973,
+    "avg_semi_prefill_ms": 675.6135135135135,
+    "avg_sync_event_ms": 20110.108108108107,
+    "summary_decode_share_in_sync_prefill": 61.48516519251282
+  },
+  "samples": [
+    {
+      "sample_id": "puzzle_0",
+      "sample_label": "P0",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "first_context": 21690.0,
+      "max_context": 29706.0,
+      "accumulated_context": 477302.0,
+      "context_multiplier": 22.005624711848778,
+      "output_tokens": 95687.0,
+      "timing_total_ms": 7270452.239999998,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 42,
+        "semi_prefill": 6
+      },
+      "delta_median": 4613.0,
+      "delta_mean": 3683.904761904762,
+      "delta_min": 1577.0,
+      "delta_max": 5380.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21690.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 25553.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 29706.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 5023.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 6630.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 11529.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 13689.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 16195.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 19127.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 24507.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 29365.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 5021.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 6598.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 11353.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 16107.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 20877.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 25646.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 5027.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 6841.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 11604.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 13796.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 18409.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 23027.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 27660.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 29406.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.1511759871639338
+        },
+        {
+          "turn": 2,
+          "churn": 0.13980340671918132
+        },
+        {
+          "turn": 3,
+          "churn": 0.8707943460083616
+        },
+        {
+          "turn": 4,
+          "churn": 0.24238310708898944
+        },
+        {
+          "turn": 5,
+          "churn": 0.42492844132188395
+        },
+        {
+          "turn": 6,
+          "churn": 0.15779092702169625
+        },
+        {
+          "turn": 7,
+          "churn": 0.1547391170114233
+        },
+        {
+          "turn": 8,
+          "churn": 0.15329115909447377
+        },
+        {
+          "turn": 9,
+          "churn": 0.21952911413065654
+        },
+        {
+          "turn": 10,
+          "churn": 0.16543504171632897
+        },
+        {
+          "turn": 11,
+          "churn": 0.8707428799044015
+        },
+        {
+          "turn": 12,
+          "churn": 0.23901182176417096
+        },
+        {
+          "turn": 13,
+          "churn": 0.4188320267770633
+        },
+        {
+          "turn": 14,
+          "churn": 0.2951511765071087
+        },
+        {
+          "turn": 15,
+          "churn": 0.22848110360684007
+        },
+        {
+          "turn": 16,
+          "churn": 0.18595492474459954
+        },
+        {
+          "turn": 17,
+          "churn": 0.8708971553610503
+        },
+        {
+          "turn": 18,
+          "churn": 0.26516591141645957
+        },
+        {
+          "turn": 19,
+          "churn": 0.4104619096863151
+        },
+        {
+          "turn": 20,
+          "churn": 0.15888663380690055
+        },
+        {
+          "turn": 21,
+          "churn": 0.25058395350100493
+        },
+        {
+          "turn": 22,
+          "churn": 0.20054718374082597
+        },
+        {
+          "turn": 23,
+          "churn": 0.16749819233550253
+        },
+        {
+          "turn": 24,
+          "churn": 0.0593756376249745
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_0",
+          "sample_label": "P0",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 3,
+          "step": 0,
+          "A": 479.0,
+          "B1": 30106.0,
+          "B2": 1300.0,
+          "C1": 3074.0,
+          "B2_C1": 4374.0,
+          "pre_prompt_tokens": 33659.0,
+          "post_prompt_tokens": 4853.0,
+          "semi_prefill_ms": 676.1,
+          "summary_prefill_ms": 4515.9,
+          "summary_decode_ms": 15600.0,
+          "summary_generation_time_s": 145.708,
+          "token_saving_pct": 85.58186517721857
+        },
+        {
+          "sample_id": "puzzle_0",
+          "sample_label": "P0",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 11,
+          "step": 0,
+          "A": 479.0,
+          "B1": 30368.0,
+          "B2": 1298.0,
+          "C1": 3074.0,
+          "B2_C1": 4372.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4851.0,
+          "semi_prefill_ms": 675.8,
+          "summary_prefill_ms": 4555.2,
+          "summary_decode_ms": 15576.0,
+          "summary_generation_time_s": 284.385,
+          "token_saving_pct": 85.69954601733389
+        },
+        {
+          "sample_id": "puzzle_0",
+          "sample_label": "P0",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 17,
+          "step": 0,
+          "A": 479.0,
+          "B1": 26663.0,
+          "B2": 1304.0,
+          "C1": 3074.0,
+          "B2_C1": 4378.0,
+          "pre_prompt_tokens": 30216.0,
+          "post_prompt_tokens": 4857.0,
+          "semi_prefill_ms": 676.6999999999999,
+          "summary_prefill_ms": 3999.45,
+          "summary_decode_ms": 15648.0,
+          "summary_generation_time_s": 232.446,
+          "token_saving_pct": 83.92573471008737
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3273.5,
+        "incremental_prefill_ms": 12024.300000000003,
+        "semi_prefill_ms": 2028.6,
+        "decode_ms": 1148244.0,
+        "total_ms": 1165570.4000000001
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3273.5,
+        "incremental_prefill_ms": 12024.300000000003,
+        "semi_prefill_ms": 2028.6,
+        "summary_prefill_ms": 13070.55,
+        "summary_decode_ms": 46824.0,
+        "decode_ms": 1148244.0,
+        "total_ms": 1225464.9500000002
+      },
+      "baseline_ms": 1163541.8,
+      "async_overhead_pct": 0.17434698091637102,
+      "sync_overhead_pct": 5.321953194977611
+    },
+    {
+      "sample_id": "puzzle_1",
+      "sample_label": "P1",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "first_context": 21681.0,
+      "max_context": 28440.0,
+      "accumulated_context": 459366.0,
+      "context_multiplier": 21.187491351874915,
+      "output_tokens": 105167.0,
+      "timing_total_ms": 8148283.509999999,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 40,
+        "semi_prefill": 8
+      },
+      "delta_median": 4704.0,
+      "delta_mean": 3336.0,
+      "delta_min": 0.0,
+      "delta_max": 5647.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21681.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22865.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 24406.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 26561.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 4651.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 9359.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 14151.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 16184.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 20943.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 25706.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 4991.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 6647.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 11758.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 17405.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 23039.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 28440.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 5065.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 8117.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 13448.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 18713.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 21082.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 26319.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 5070.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 9774.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 14681.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.0517821998687951
+        },
+        {
+          "turn": 2,
+          "churn": 0.06314021142342047
+        },
+        {
+          "turn": 3,
+          "churn": 0.08113399344904183
+        },
+        {
+          "turn": 4,
+          "churn": 0.0
+        },
+        {
+          "turn": 5,
+          "churn": 0.5030451971364462
+        },
+        {
+          "turn": 6,
+          "churn": 0.3092360963889478
+        },
+        {
+          "turn": 7,
+          "churn": 0.12561789421651012
+        },
+        {
+          "turn": 8,
+          "churn": 0.2272358305877859
+        },
+        {
+          "turn": 9,
+          "churn": 0.1852874815218237
+        },
+        {
+          "turn": 10,
+          "churn": 0.0
+        },
+        {
+          "turn": 11,
+          "churn": 0.2491349480968858
+        },
+        {
+          "turn": 12,
+          "churn": 0.4346827691784317
+        },
+        {
+          "turn": 13,
+          "churn": 0.3244469979890836
+        },
+        {
+          "turn": 14,
+          "churn": 0.2445418637961717
+        },
+        {
+          "turn": 15,
+          "churn": 0.15414908579465542
+        },
+        {
+          "turn": 16,
+          "churn": 0.0
+        },
+        {
+          "turn": 17,
+          "churn": 0.3760009855858076
+        },
+        {
+          "turn": 18,
+          "churn": 0.3964158239143367
+        },
+        {
+          "turn": 19,
+          "churn": 0.28135520760968313
+        },
+        {
+          "turn": 20,
+          "churn": 0.11237074281377478
+        },
+        {
+          "turn": 21,
+          "churn": 0.198981724229644
+        },
+        {
+          "turn": 22,
+          "churn": 0.8642998027613412
+        },
+        {
+          "turn": 23,
+          "churn": 0.4812768569674647
+        },
+        {
+          "turn": 24,
+          "churn": 0.3342415366800627
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_1",
+          "sample_label": "P1",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 6,
+          "step": 0,
+          "A": 472.0,
+          "B1": 30375.0,
+          "B2": 1302.0,
+          "C1": 3074.0,
+          "B2_C1": 4376.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4848.0,
+          "semi_prefill_ms": 676.4,
+          "summary_prefill_ms": 4556.25,
+          "summary_decode_ms": 15624.0,
+          "summary_generation_time_s": 83.486,
+          "token_saving_pct": 85.70838983550499
+        },
+        {
+          "sample_id": "puzzle_1",
+          "sample_label": "P1",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 15,
+          "step": 0,
+          "A": 472.0,
+          "B1": 30251.0,
+          "B2": 1310.0,
+          "C1": 3074.0,
+          "B2_C1": 4384.0,
+          "pre_prompt_tokens": 33797.0,
+          "post_prompt_tokens": 4856.0,
+          "semi_prefill_ms": 677.6,
+          "summary_prefill_ms": 4537.65,
+          "summary_decode_ms": 15720.0,
+          "summary_generation_time_s": 133.91,
+          "token_saving_pct": 85.63186081604877
+        },
+        {
+          "sample_id": "puzzle_1",
+          "sample_label": "P1",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 22,
+          "step": 0,
+          "A": 472.0,
+          "B1": 30375.0,
+          "B2": 1308.0,
+          "C1": 3074.0,
+          "B2_C1": 4382.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4854.0,
+          "semi_prefill_ms": 677.3,
+          "summary_prefill_ms": 4556.25,
+          "summary_decode_ms": 15696.0,
+          "summary_generation_time_s": 133.142,
+          "token_saving_pct": 85.69070219916279
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3272.15,
+        "incremental_prefill_ms": 10928.4,
+        "semi_prefill_ms": 2031.3,
+        "decode_ms": 1262004.0,
+        "total_ms": 1278235.85
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3272.15,
+        "incremental_prefill_ms": 10928.4,
+        "semi_prefill_ms": 2031.3,
+        "summary_prefill_ms": 13650.15,
+        "summary_decode_ms": 47040.0,
+        "decode_ms": 1262004.0,
+        "total_ms": 1338926.0
+      },
+      "baseline_ms": 1276204.55,
+      "async_overhead_pct": 0.15916727455641808,
+      "sync_overhead_pct": 4.914686285987618
+    },
+    {
+      "sample_id": "puzzle_10",
+      "sample_label": "P10",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "first_context": 21683.0,
+      "max_context": 30294.0,
+      "accumulated_context": 498957.0,
+      "context_multiplier": 23.011437531706868,
+      "output_tokens": 83945.0,
+      "timing_total_ms": 2588581.5600000005,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 42,
+        "semi_prefill": 6
+      },
+      "delta_median": 2562.0,
+      "delta_mean": 3167.095238095238,
+      "delta_min": 998.0,
+      "delta_max": 4793.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21683.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22681.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 24245.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 26396.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 28245.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 30294.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 5018.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 6304.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 7988.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 12719.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 17424.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 19816.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 24609.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 26633.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 29195.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 5026.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 9489.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 13875.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 15729.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 20350.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 25042.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 29733.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 5024.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 9584.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 14038.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.044001587231603544
+        },
+        {
+          "turn": 2,
+          "churn": 0.0645081460094865
+        },
+        {
+          "turn": 3,
+          "churn": 0.08148961963933929
+        },
+        {
+          "turn": 4,
+          "churn": 0.06546291379005134
+        },
+        {
+          "turn": 5,
+          "churn": 0.06763715587244999
+        },
+        {
+          "turn": 6,
+          "churn": 0.8720605819051415
+        },
+        {
+          "turn": 7,
+          "churn": 0.203997461928934
+        },
+        {
+          "turn": 8,
+          "churn": 0.21081622433650477
+        },
+        {
+          "turn": 9,
+          "churn": 0.371963204654454
+        },
+        {
+          "turn": 10,
+          "churn": 0.2700298438934803
+        },
+        {
+          "turn": 11,
+          "churn": 0.12071053693984658
+        },
+        {
+          "turn": 12,
+          "churn": 0.1947661424682027
+        },
+        {
+          "turn": 13,
+          "churn": 0.07599594488041152
+        },
+        {
+          "turn": 14,
+          "churn": 0.08775475252611749
+        },
+        {
+          "turn": 15,
+          "churn": 0.8722642260246717
+        },
+        {
+          "turn": 16,
+          "churn": 0.4703340710296132
+        },
+        {
+          "turn": 17,
+          "churn": 0.31610810810810813
+        },
+        {
+          "turn": 18,
+          "churn": 0.11787144764447835
+        },
+        {
+          "turn": 19,
+          "churn": 0.22707616707616707
+        },
+        {
+          "turn": 20,
+          "churn": 0.18736522641961503
+        },
+        {
+          "turn": 21,
+          "churn": 0.15777082702720882
+        },
+        {
+          "turn": 22,
+          "churn": 0.8722133757961783
+        },
+        {
+          "turn": 23,
+          "churn": 0.4757929883138564
+        },
+        {
+          "turn": 24,
+          "churn": 0.31728166405470865
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_10",
+          "sample_label": "P10",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 6,
+          "step": 0,
+          "A": 472.0,
+          "B1": 30375.0,
+          "B2": 1302.0,
+          "C1": 3074.0,
+          "B2_C1": 4376.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4848.0,
+          "semi_prefill_ms": 676.4,
+          "summary_prefill_ms": 4556.25,
+          "summary_decode_ms": 15624.0,
+          "summary_generation_time_s": 83.486,
+          "token_saving_pct": 85.70838983550499
+        },
+        {
+          "sample_id": "puzzle_10",
+          "sample_label": "P10",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 15,
+          "step": 0,
+          "A": 472.0,
+          "B1": 30251.0,
+          "B2": 1310.0,
+          "C1": 3074.0,
+          "B2_C1": 4384.0,
+          "pre_prompt_tokens": 33797.0,
+          "post_prompt_tokens": 4856.0,
+          "semi_prefill_ms": 677.6,
+          "summary_prefill_ms": 4537.65,
+          "summary_decode_ms": 15720.0,
+          "summary_generation_time_s": 133.91,
+          "token_saving_pct": 85.63186081604877
+        },
+        {
+          "sample_id": "puzzle_10",
+          "sample_label": "P10",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 22,
+          "step": 0,
+          "A": 472.0,
+          "B1": 30375.0,
+          "B2": 1308.0,
+          "C1": 3074.0,
+          "B2_C1": 4382.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4854.0,
+          "semi_prefill_ms": 677.3,
+          "summary_prefill_ms": 4556.25,
+          "summary_decode_ms": 15696.0,
+          "summary_generation_time_s": 133.142,
+          "token_saving_pct": 85.69070219916279
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3272.45,
+        "incremental_prefill_ms": 10396.35,
+        "semi_prefill_ms": 2031.3,
+        "decode_ms": 1007340.0,
+        "total_ms": 1023040.1000000001
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3272.45,
+        "incremental_prefill_ms": 10396.35,
+        "semi_prefill_ms": 2031.3,
+        "summary_prefill_ms": 13650.15,
+        "summary_decode_ms": 47040.0,
+        "decode_ms": 1007340.0,
+        "total_ms": 1083730.25
+      },
+      "baseline_ms": 1021008.8,
+      "async_overhead_pct": 0.1989502930826845,
+      "sync_overhead_pct": 6.143086132068596
+    },
+    {
+      "sample_id": "puzzle_11",
+      "sample_label": "P11",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 3,
+      "steps": 6,
+      "n_compressions": 0,
+      "compression_rate": 0.0,
+      "first_context": 21678.0,
+      "max_context": 26703.0,
+      "accumulated_context": 78534.0,
+      "context_multiplier": 3.6227511763077773,
+      "output_tokens": 9679.0,
+      "timing_total_ms": 302279.58999999997,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 4
+      },
+      "delta_median": 2512.5,
+      "delta_mean": 2512.5,
+      "delta_min": 1149.0,
+      "delta_max": 3876.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21678.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 25554.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 26703.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.1516787978398685
+        },
+        {
+          "turn": 2,
+          "churn": 0.043028873160319066
+        }
+      ],
+      "events": [],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3271.7,
+        "incremental_prefill_ms": 793.75,
+        "semi_prefill_ms": 0,
+        "decode_ms": 116148.0,
+        "total_ms": 120213.45
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3271.7,
+        "incremental_prefill_ms": 793.75,
+        "semi_prefill_ms": 0,
+        "summary_prefill_ms": 0,
+        "summary_decode_ms": 0,
+        "decode_ms": 116148.0,
+        "total_ms": 120213.45
+      },
+      "baseline_ms": 120213.45,
+      "async_overhead_pct": 0.0,
+      "sync_overhead_pct": 0.0
+    },
+    {
+      "sample_id": "puzzle_2",
+      "sample_label": "P2",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 4,
+      "compression_rate": 0.16,
+      "first_context": 21705.0,
+      "max_context": 29838.0,
+      "accumulated_context": 472201.0,
+      "context_multiplier": 21.755401981110342,
+      "output_tokens": 105036.0,
+      "timing_total_ms": 7311690.070000002,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 40,
+        "semi_prefill": 8
+      },
+      "delta_median": 4834.0,
+      "delta_mean": 4062.85,
+      "delta_min": 1150.0,
+      "delta_max": 5074.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21705.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22855.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 24285.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 26097.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 4588.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 9123.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 13952.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 18800.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 23634.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 28468.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 4852.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 9345.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 14283.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 19250.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 24218.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 29175.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 5070.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 9642.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 14716.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 19749.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 24793.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 29838.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 5075.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 6822.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 8969.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.05031721723911617
+        },
+        {
+          "turn": 2,
+          "churn": 0.058884084826024294
+        },
+        {
+          "turn": 3,
+          "churn": 0.06943326819174618
+        },
+        {
+          "turn": 4,
+          "churn": 0.8552746294681779
+        },
+        {
+          "turn": 5,
+          "churn": 0.4970952537542475
+        },
+        {
+          "turn": 6,
+          "churn": 0.346115252293578
+        },
+        {
+          "turn": 7,
+          "churn": 0.2578723404255319
+        },
+        {
+          "turn": 8,
+          "churn": 0.20453583819920454
+        },
+        {
+          "turn": 9,
+          "churn": 0.1698046929886188
+        },
+        {
+          "turn": 10,
+          "churn": 0.8631492168178071
+        },
+        {
+          "turn": 11,
+          "churn": 0.48079186730872125
+        },
+        {
+          "turn": 12,
+          "churn": 0.34572568788069735
+        },
+        {
+          "turn": 13,
+          "churn": 0.25802597402597405
+        },
+        {
+          "turn": 14,
+          "churn": 0.20513667520026427
+        },
+        {
+          "turn": 15,
+          "churn": 0.1699057412167952
+        },
+        {
+          "turn": 16,
+          "churn": 0.8690335305719921
+        },
+        {
+          "turn": 17,
+          "churn": 0.4741754822650902
+        },
+        {
+          "turn": 18,
+          "churn": 0.3447947811905409
+        },
+        {
+          "turn": 19,
+          "churn": 0.2548483467517343
+        },
+        {
+          "turn": 20,
+          "churn": 0.20344452063082322
+        },
+        {
+          "turn": 21,
+          "churn": 0.16907969703063208
+        },
+        {
+          "turn": 22,
+          "churn": 0.8691625615763546
+        },
+        {
+          "turn": 23,
+          "churn": 0.2560832600410437
+        },
+        {
+          "turn": 24,
+          "churn": 0.23938008696621696
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_2",
+          "sample_label": "P2",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 4,
+          "step": 0,
+          "A": 494.0,
+          "B1": 27154.0,
+          "B2": 850.0,
+          "C1": 3074.0,
+          "B2_C1": 3924.0,
+          "pre_prompt_tokens": 30722.0,
+          "post_prompt_tokens": 4418.0,
+          "semi_prefill_ms": 608.6,
+          "summary_prefill_ms": 4073.1,
+          "summary_decode_ms": 10200.0,
+          "summary_generation_time_s": 117.066,
+          "token_saving_pct": 85.6194258186316
+        },
+        {
+          "sample_id": "puzzle_2",
+          "sample_label": "P2",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 10,
+          "step": 0,
+          "A": 494.0,
+          "B1": 29534.0,
+          "B2": 1114.0,
+          "C1": 3074.0,
+          "B2_C1": 4188.0,
+          "pre_prompt_tokens": 33102.0,
+          "post_prompt_tokens": 4682.0,
+          "semi_prefill_ms": 648.1999999999999,
+          "summary_prefill_ms": 4430.099999999999,
+          "summary_decode_ms": 13368.0,
+          "summary_generation_time_s": 292.334,
+          "token_saving_pct": 85.85583952631261
+        },
+        {
+          "sample_id": "puzzle_2",
+          "sample_label": "P2",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 16,
+          "step": 0,
+          "A": 494.0,
+          "B1": 30353.0,
+          "B2": 1332.0,
+          "C1": 3074.0,
+          "B2_C1": 4406.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4900.0,
+          "semi_prefill_ms": 680.9,
+          "summary_prefill_ms": 4552.95,
+          "summary_decode_ms": 15984.0,
+          "summary_generation_time_s": 299.011,
+          "token_saving_pct": 85.55509698720594
+        },
+        {
+          "sample_id": "puzzle_2",
+          "sample_label": "P2",
+          "run_name": "compressed",
+          "event": 4,
+          "turn": 22,
+          "step": 0,
+          "A": 494.0,
+          "B1": 30353.0,
+          "B2": 1337.0,
+          "C1": 3074.0,
+          "B2_C1": 4411.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4905.0,
+          "semi_prefill_ms": 681.65,
+          "summary_prefill_ms": 4552.95,
+          "summary_decode_ms": 16044.0,
+          "summary_generation_time_s": 134.251,
+          "token_saving_pct": 85.54035729025411
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3275.75,
+        "incremental_prefill_ms": 12588.55,
+        "semi_prefill_ms": 2619.35,
+        "decode_ms": 1260432.0,
+        "total_ms": 1278915.6500000001
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3275.75,
+        "incremental_prefill_ms": 12588.55,
+        "semi_prefill_ms": 2619.35,
+        "summary_prefill_ms": 17609.1,
+        "summary_decode_ms": 55596.0,
+        "decode_ms": 1260432.0,
+        "total_ms": 1352120.7500000002
+      },
+      "baseline_ms": 1276296.3,
+      "async_overhead_pct": 0.205230556572169,
+      "sync_overhead_pct": 5.94097546157581
+    },
+    {
+      "sample_id": "puzzle_3",
+      "sample_label": "P3",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "first_context": 21709.0,
+      "max_context": 29820.0,
+      "accumulated_context": 475188.0,
+      "context_multiplier": 21.888986134782808,
+      "output_tokens": 81764.0,
+      "timing_total_ms": 2538417.6600000006,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 42,
+        "semi_prefill": 6
+      },
+      "delta_median": 2217.0,
+      "delta_mean": 3131.285714285714,
+      "delta_min": 823.0,
+      "delta_max": 4867.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21709.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22532.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 26804.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 28338.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 29820.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 4603.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 9232.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 14009.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 15946.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 17912.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 19794.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 21762.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 26629.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 5017.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 6648.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 8734.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 10469.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 15175.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 19884.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 24586.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 26803.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 5040.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 9365.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 14079.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 18874.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.036525829930765134
+        },
+        {
+          "turn": 2,
+          "churn": 0.159379197134756
+        },
+        {
+          "turn": 3,
+          "churn": 0.054132260568847484
+        },
+        {
+          "turn": 4,
+          "churn": 0.049698189134808855
+        },
+        {
+          "turn": 5,
+          "churn": 0.852922007386487
+        },
+        {
+          "turn": 6,
+          "churn": 0.5014081455805892
+        },
+        {
+          "turn": 7,
+          "churn": 0.3409950745949033
+        },
+        {
+          "turn": 8,
+          "churn": 0.12147246958484886
+        },
+        {
+          "turn": 9,
+          "churn": 0.10975882090218848
+        },
+        {
+          "turn": 10,
+          "churn": 0.09507931696473679
+        },
+        {
+          "turn": 11,
+          "churn": 0.09043286462641302
+        },
+        {
+          "turn": 12,
+          "churn": 0.18277066356228172
+        },
+        {
+          "turn": 13,
+          "churn": 0.8668527008172214
+        },
+        {
+          "turn": 14,
+          "churn": 0.2453369434416366
+        },
+        {
+          "turn": 15,
+          "churn": 0.23883673002060912
+        },
+        {
+          "turn": 16,
+          "churn": 0.1657273856146719
+        },
+        {
+          "turn": 17,
+          "churn": 0.3101153212520593
+        },
+        {
+          "turn": 18,
+          "churn": 0.2368235767451217
+        },
+        {
+          "turn": 19,
+          "churn": 0.191247051167331
+        },
+        {
+          "turn": 20,
+          "churn": 0.08271462149759355
+        },
+        {
+          "turn": 21,
+          "churn": 0.8674603174603175
+        },
+        {
+          "turn": 22,
+          "churn": 0.46182594767752266
+        },
+        {
+          "turn": 23,
+          "churn": 0.33482491654236807
+        },
+        {
+          "turn": 24,
+          "churn": 0.25405319487125144
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_3",
+          "sample_label": "P3",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 5,
+          "step": 0,
+          "A": 498.0,
+          "B1": 27518.0,
+          "B2": 912.0,
+          "C1": 3014.0,
+          "B2_C1": 3926.0,
+          "pre_prompt_tokens": 31030.0,
+          "post_prompt_tokens": 4424.0,
+          "semi_prefill_ms": 608.9,
+          "summary_prefill_ms": 4127.7,
+          "summary_decode_ms": 10944.0,
+          "summary_generation_time_s": 44.593,
+          "token_saving_pct": 85.74282951981954
+        },
+        {
+          "sample_id": "puzzle_3",
+          "sample_label": "P3",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 13,
+          "step": 0,
+          "A": 498.0,
+          "B1": 28043.0,
+          "B2": 1275.0,
+          "C1": 3074.0,
+          "B2_C1": 4349.0,
+          "pre_prompt_tokens": 31615.0,
+          "post_prompt_tokens": 4847.0,
+          "semi_prefill_ms": 672.35,
+          "summary_prefill_ms": 4206.45,
+          "summary_decode_ms": 15300.0,
+          "summary_generation_time_s": 89.519,
+          "token_saving_pct": 84.66866993515735
+        },
+        {
+          "sample_id": "puzzle_3",
+          "sample_label": "P3",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 21,
+          "step": 0,
+          "A": 498.0,
+          "B1": 27720.0,
+          "B2": 1298.0,
+          "C1": 3074.0,
+          "B2_C1": 4372.0,
+          "pre_prompt_tokens": 31292.0,
+          "post_prompt_tokens": 4870.0,
+          "semi_prefill_ms": 675.8,
+          "summary_prefill_ms": 4158.0,
+          "summary_decode_ms": 15576.0,
+          "summary_generation_time_s": 133.637,
+          "token_saving_pct": 84.43691678384252
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3276.35,
+        "incremental_prefill_ms": 10283.550000000001,
+        "semi_prefill_ms": 1957.05,
+        "decode_ms": 981168.0,
+        "total_ms": 996684.9500000001
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3276.35,
+        "incremental_prefill_ms": 10283.550000000001,
+        "semi_prefill_ms": 1957.05,
+        "summary_prefill_ms": 12492.15,
+        "summary_decode_ms": 41820.0,
+        "decode_ms": 981168.0,
+        "total_ms": 1050997.1
+      },
+      "baseline_ms": 994727.9,
+      "async_overhead_pct": 0.19674224478875077,
+      "sync_overhead_pct": 5.656742914318579
+    },
+    {
+      "sample_id": "puzzle_4",
+      "sample_label": "P4",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "first_context": 21715.0,
+      "max_context": 29626.0,
+      "accumulated_context": 500191.0,
+      "context_multiplier": 23.034354133087728,
+      "output_tokens": 84105.0,
+      "timing_total_ms": 2755902.4300000006,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 42,
+        "semi_prefill": 6
+      },
+      "delta_median": 4269.0,
+      "delta_mean": 3282.4761904761904,
+      "delta_min": 808.0,
+      "delta_max": 5123.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21715.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22523.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 23918.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 25563.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 27244.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 28871.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 4883.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 9152.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 13779.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 15502.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 17352.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 22058.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 26782.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 28595.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 4165.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 9288.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 14382.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 19478.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 24553.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 29626.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 5091.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 9460.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 11168.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 15713.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 17694.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.03587443946188341
+        },
+        {
+          "turn": 2,
+          "churn": 0.05832427460490008
+        },
+        {
+          "turn": 3,
+          "churn": 0.064350819543872
+        },
+        {
+          "turn": 4,
+          "churn": 0.061701659080898544
+        },
+        {
+          "turn": 5,
+          "churn": 0.05635412697862907
+        },
+        {
+          "turn": 6,
+          "churn": 0.8619701003481466
+        },
+        {
+          "turn": 7,
+          "churn": 0.4664554195804196
+        },
+        {
+          "turn": 8,
+          "churn": 0.3358008563756441
+        },
+        {
+          "turn": 9,
+          "churn": 0.11114694878080247
+        },
+        {
+          "turn": 10,
+          "churn": 0.1066159520516367
+        },
+        {
+          "turn": 11,
+          "churn": 0.21334663160758002
+        },
+        {
+          "turn": 12,
+          "churn": 0.17638712568142784
+        },
+        {
+          "turn": 13,
+          "churn": 0.06340269277845777
+        },
+        {
+          "turn": 14,
+          "churn": 0.8367346938775511
+        },
+        {
+          "turn": 15,
+          "churn": 0.5515719207579672
+        },
+        {
+          "turn": 16,
+          "churn": 0.3541927409261577
+        },
+        {
+          "turn": 17,
+          "churn": 0.26162850395317794
+        },
+        {
+          "turn": 18,
+          "churn": 0.20669571946401663
+        },
+        {
+          "turn": 19,
+          "churn": 0.1712347262539661
+        },
+        {
+          "turn": 20,
+          "churn": 0.8676095069730898
+        },
+        {
+          "turn": 21,
+          "churn": 0.46183932346723044
+        },
+        {
+          "turn": 22,
+          "churn": 0.15293696275071633
+        },
+        {
+          "turn": 23,
+          "churn": 0.2892509387131674
+        },
+        {
+          "turn": 24,
+          "churn": 0.11195885610941562
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_4",
+          "sample_label": "P4",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 6,
+          "step": 0,
+          "A": 504.0,
+          "B1": 29437.0,
+          "B2": 1135.0,
+          "C1": 3074.0,
+          "B2_C1": 4209.0,
+          "pre_prompt_tokens": 33015.0,
+          "post_prompt_tokens": 4713.0,
+          "semi_prefill_ms": 651.35,
+          "summary_prefill_ms": 4415.55,
+          "summary_decode_ms": 13620.0,
+          "summary_generation_time_s": 62.837,
+          "token_saving_pct": 85.72467060427078
+        },
+        {
+          "sample_id": "puzzle_4",
+          "sample_label": "P4",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 14,
+          "step": 0,
+          "A": 504.0,
+          "B1": 27608.0,
+          "B2": 1330.0,
+          "C1": 2155.0,
+          "B2_C1": 3485.0,
+          "pre_prompt_tokens": 30267.0,
+          "post_prompt_tokens": 3989.0,
+          "semi_prefill_ms": 542.75,
+          "summary_prefill_ms": 4141.2,
+          "summary_decode_ms": 15960.0,
+          "summary_generation_time_s": 99.86,
+          "token_saving_pct": 86.82062972874748
+        },
+        {
+          "sample_id": "puzzle_4",
+          "sample_label": "P4",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 20,
+          "step": 0,
+          "A": 504.0,
+          "B1": 30343.0,
+          "B2": 1343.0,
+          "C1": 3074.0,
+          "B2_C1": 4417.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4921.0,
+          "semi_prefill_ms": 682.55,
+          "summary_prefill_ms": 4551.45,
+          "summary_decode_ms": 16116.0,
+          "summary_generation_time_s": 187.399,
+          "token_saving_pct": 85.49319026000826
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3277.25,
+        "incremental_prefill_ms": 10759.800000000001,
+        "semi_prefill_ms": 1876.6499999999999,
+        "decode_ms": 1009260.0,
+        "total_ms": 1025173.7000000001
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3277.25,
+        "incremental_prefill_ms": 10759.800000000001,
+        "semi_prefill_ms": 1876.6499999999999,
+        "summary_prefill_ms": 13108.2,
+        "summary_decode_ms": 45696.0,
+        "decode_ms": 1009260.0,
+        "total_ms": 1083977.9
+      },
+      "baseline_ms": 1023297.05,
+      "async_overhead_pct": 0.18339249585445397,
+      "sync_overhead_pct": 5.9299350076304815
+    },
+    {
+      "sample_id": "puzzle_5",
+      "sample_label": "P5",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 4,
+      "compression_rate": 0.16,
+      "first_context": 21692.0,
+      "max_context": 29158.0,
+      "accumulated_context": 477128.0,
+      "context_multiplier": 21.995574405310713,
+      "output_tokens": 110456.0,
+      "timing_total_ms": 3386944.7399999993,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 40,
+        "semi_prefill": 8
+      },
+      "delta_median": 4662.0,
+      "delta_mean": 4345.7,
+      "delta_min": 1121.0,
+      "delta_max": 4881.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21692.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22813.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 24360.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 29158.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 4608.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 9142.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 13644.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 18161.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 22671.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 27309.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 5026.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 9444.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 14078.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 18858.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 23628.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 28396.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 5045.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 9728.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 14460.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 19341.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 24219.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 29096.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 5044.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 9685.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 14370.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.04913864901591198
+        },
+        {
+          "turn": 2,
+          "churn": 0.06350574712643678
+        },
+        {
+          "turn": 3,
+          "churn": 0.16455175252074902
+        },
+        {
+          "turn": 4,
+          "churn": 0.8587239583333334
+        },
+        {
+          "turn": 5,
+          "churn": 0.49595274556989716
+        },
+        {
+          "turn": 6,
+          "churn": 0.3299618880093814
+        },
+        {
+          "turn": 7,
+          "churn": 0.248719784152855
+        },
+        {
+          "turn": 8,
+          "churn": 0.19893255701115964
+        },
+        {
+          "turn": 9,
+          "churn": 0.16983412061957595
+        },
+        {
+          "turn": 10,
+          "churn": 0.8704735376044568
+        },
+        {
+          "turn": 11,
+          "churn": 0.4678102498941127
+        },
+        {
+          "turn": 12,
+          "churn": 0.32916607472652365
+        },
+        {
+          "turn": 13,
+          "churn": 0.2534733269699862
+        },
+        {
+          "turn": 14,
+          "churn": 0.20187912646013204
+        },
+        {
+          "turn": 15,
+          "churn": 0.1679109733765319
+        },
+        {
+          "turn": 16,
+          "churn": 0.8709613478691774
+        },
+        {
+          "turn": 17,
+          "churn": 0.48139391447368424
+        },
+        {
+          "turn": 18,
+          "churn": 0.3272475795297372
+        },
+        {
+          "turn": 19,
+          "churn": 0.25236544129052274
+        },
+        {
+          "turn": 20,
+          "churn": 0.2014121144555927
+        },
+        {
+          "turn": 21,
+          "churn": 0.16761754193016223
+        },
+        {
+          "turn": 22,
+          "churn": 0.8709357652656622
+        },
+        {
+          "turn": 23,
+          "churn": 0.4791946308724832
+        },
+        {
+          "turn": 24,
+          "churn": 0.32602644398051495
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_5",
+          "sample_label": "P5",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 4,
+          "step": 0,
+          "A": 481.0,
+          "B1": 30190.0,
+          "B2": 883.0,
+          "C1": 3074.0,
+          "B2_C1": 3957.0,
+          "pre_prompt_tokens": 33745.0,
+          "post_prompt_tokens": 4438.0,
+          "semi_prefill_ms": 613.55,
+          "summary_prefill_ms": 4528.5,
+          "summary_decode_ms": 10596.0,
+          "summary_generation_time_s": 48.062,
+          "token_saving_pct": 86.84842198844274
+        },
+        {
+          "sample_id": "puzzle_5",
+          "sample_label": "P5",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 10,
+          "step": 0,
+          "A": 481.0,
+          "B1": 28187.0,
+          "B2": 1301.0,
+          "C1": 3074.0,
+          "B2_C1": 4375.0,
+          "pre_prompt_tokens": 31742.0,
+          "post_prompt_tokens": 4856.0,
+          "semi_prefill_ms": 676.25,
+          "summary_prefill_ms": 4228.05,
+          "summary_decode_ms": 15612.0,
+          "summary_generation_time_s": 86.525,
+          "token_saving_pct": 84.70165711045303
+        },
+        {
+          "sample_id": "puzzle_5",
+          "sample_label": "P5",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 16,
+          "step": 0,
+          "A": 481.0,
+          "B1": 29417.0,
+          "B2": 1320.0,
+          "C1": 3074.0,
+          "B2_C1": 4394.0,
+          "pre_prompt_tokens": 32972.0,
+          "post_prompt_tokens": 4875.0,
+          "semi_prefill_ms": 679.1,
+          "summary_prefill_ms": 4412.55,
+          "summary_decode_ms": 15840.0,
+          "summary_generation_time_s": 132.622,
+          "token_saving_pct": 85.21472764770108
+        },
+        {
+          "sample_id": "puzzle_5",
+          "sample_label": "P5",
+          "run_name": "compressed",
+          "event": 4,
+          "turn": 22,
+          "step": 0,
+          "A": 481.0,
+          "B1": 30099.0,
+          "B2": 1319.0,
+          "C1": 3074.0,
+          "B2_C1": 4393.0,
+          "pre_prompt_tokens": 33654.0,
+          "post_prompt_tokens": 4874.0,
+          "semi_prefill_ms": 678.9499999999999,
+          "summary_prefill_ms": 4514.849999999999,
+          "summary_decode_ms": 15828.0,
+          "summary_generation_time_s": 132.813,
+          "token_saving_pct": 85.51732334937897
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3273.7999999999997,
+        "incremental_prefill_ms": 13437.1,
+        "semi_prefill_ms": 2647.85,
+        "decode_ms": 1325472.0,
+        "total_ms": 1344830.75
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3273.7999999999997,
+        "incremental_prefill_ms": 13437.1,
+        "semi_prefill_ms": 2647.85,
+        "summary_prefill_ms": 17683.949999999997,
+        "summary_decode_ms": 57876.0,
+        "decode_ms": 1325472.0,
+        "total_ms": 1420390.7
+      },
+      "baseline_ms": 1342182.9,
+      "async_overhead_pct": 0.1972793722822724,
+      "sync_overhead_pct": 5.826910773486981
+    },
+    {
+      "sample_id": "puzzle_6",
+      "sample_label": "P6",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "first_context": 21690.0,
+      "max_context": 30220.0,
+      "accumulated_context": 469565.0,
+      "context_multiplier": 21.648916551406177,
+      "output_tokens": 80802.0,
+      "timing_total_ms": 2505294.4399999995,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 42,
+        "semi_prefill": 6
+      },
+      "delta_median": 2459.0,
+      "delta_mean": 3080.4761904761904,
+      "delta_min": 1242.0,
+      "delta_max": 5160.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21690.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22932.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 24247.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 25762.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 30220.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 5730.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 7737.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 9714.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 11837.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 14172.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 16643.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 21803.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 24262.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 27259.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 4960.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 9270.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 14077.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 16423.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 21207.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 25982.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 5025.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 9344.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 11756.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 16552.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 18634.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.05416012558869702
+        },
+        {
+          "turn": 2,
+          "churn": 0.054233513424341157
+        },
+        {
+          "turn": 3,
+          "churn": 0.05880754599798153
+        },
+        {
+          "turn": 4,
+          "churn": 0.14751819986763734
+        },
+        {
+          "turn": 5,
+          "churn": 0.8860383944153578
+        },
+        {
+          "turn": 6,
+          "churn": 0.25940286932919737
+        },
+        {
+          "turn": 7,
+          "churn": 0.2035206917850525
+        },
+        {
+          "turn": 8,
+          "churn": 0.1793528765734561
+        },
+        {
+          "turn": 9,
+          "churn": 0.16476150155235675
+        },
+        {
+          "turn": 10,
+          "churn": 0.14847082857657873
+        },
+        {
+          "turn": 11,
+          "churn": 0.23666467917259093
+        },
+        {
+          "turn": 12,
+          "churn": 0.10135190833402027
+        },
+        {
+          "turn": 13,
+          "churn": 0.10994533915404087
+        },
+        {
+          "turn": 14,
+          "churn": 0.8691532258064516
+        },
+        {
+          "turn": 15,
+          "churn": 0.46494066882416396
+        },
+        {
+          "turn": 16,
+          "churn": 0.34147900831142997
+        },
+        {
+          "turn": 17,
+          "churn": 0.14284844425500823
+        },
+        {
+          "turn": 18,
+          "churn": 0.22558589145093602
+        },
+        {
+          "turn": 19,
+          "churn": 0.18378107920868295
+        },
+        {
+          "turn": 20,
+          "churn": 0.8708457711442786
+        },
+        {
+          "turn": 21,
+          "churn": 0.4622217465753425
+        },
+        {
+          "turn": 22,
+          "churn": 0.20517182715209256
+        },
+        {
+          "turn": 23,
+          "churn": 0.28975350410826484
+        },
+        {
+          "turn": 24,
+          "churn": 0.11173124396264893
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_6",
+          "sample_label": "P6",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 5,
+          "step": 0,
+          "A": 479.0,
+          "B1": 26338.0,
+          "B2": 834.0,
+          "C1": 4243.0,
+          "B2_C1": 5077.0,
+          "pre_prompt_tokens": 31060.0,
+          "post_prompt_tokens": 5556.0,
+          "semi_prefill_ms": 781.55,
+          "summary_prefill_ms": 3950.7,
+          "summary_decode_ms": 10008.0,
+          "summary_generation_time_s": 41.297,
+          "token_saving_pct": 82.1120412105602
+        },
+        {
+          "sample_id": "puzzle_6",
+          "sample_label": "P6",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 14,
+          "step": 0,
+          "A": 479.0,
+          "B1": 28808.0,
+          "B2": 1237.0,
+          "C1": 3074.0,
+          "B2_C1": 4311.0,
+          "pre_prompt_tokens": 32361.0,
+          "post_prompt_tokens": 4790.0,
+          "semi_prefill_ms": 666.65,
+          "summary_prefill_ms": 4321.2,
+          "summary_decode_ms": 14844.0,
+          "summary_generation_time_s": 111.104,
+          "token_saving_pct": 85.19823244028306
+        },
+        {
+          "sample_id": "puzzle_6",
+          "sample_label": "P6",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 20,
+          "step": 0,
+          "A": 479.0,
+          "B1": 27059.0,
+          "B2": 1302.0,
+          "C1": 3074.0,
+          "B2_C1": 4376.0,
+          "pre_prompt_tokens": 30612.0,
+          "post_prompt_tokens": 4855.0,
+          "semi_prefill_ms": 676.4,
+          "summary_prefill_ms": 4058.85,
+          "summary_decode_ms": 15624.0,
+          "summary_generation_time_s": 131.636,
+          "token_saving_pct": 84.14020645498498
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3273.5,
+        "incremental_prefill_ms": 10123.499999999998,
+        "semi_prefill_ms": 2124.6,
+        "decode_ms": 969624.0,
+        "total_ms": 985145.6
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3273.5,
+        "incremental_prefill_ms": 10123.499999999998,
+        "semi_prefill_ms": 2124.6,
+        "summary_prefill_ms": 12330.75,
+        "summary_decode_ms": 40476.0,
+        "decode_ms": 969624.0,
+        "total_ms": 1037952.35
+      },
+      "baseline_ms": 983021.0,
+      "async_overhead_pct": 0.21612966559208807,
+      "sync_overhead_pct": 5.588013887800972
+    },
+    {
+      "sample_id": "puzzle_7",
+      "sample_label": "P7",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 3,
+      "compression_rate": 0.12,
+      "first_context": 21682.0,
+      "max_context": 29778.0,
+      "accumulated_context": 463284.0,
+      "context_multiplier": 21.367217046397933,
+      "output_tokens": 90817.0,
+      "timing_total_ms": 2801037.5399999996,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 42,
+        "semi_prefill": 6
+      },
+      "delta_median": 4387.0,
+      "delta_mean": 3446.4761904761904,
+      "delta_min": 940.0,
+      "delta_max": 5142.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21682.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22622.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 26765.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 5046.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 6605.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 11543.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 13748.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 18846.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 21066.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 26208.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 5012.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 9399.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 10946.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 12482.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 17002.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 18651.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 20349.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 25064.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 29778.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 5032.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 7260.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 11828.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 16723.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 21477.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 26397.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.04155247104588454
+        },
+        {
+          "turn": 2,
+          "churn": 0.15479170558565292
+        },
+        {
+          "turn": 3,
+          "churn": 0.8729686880697582
+        },
+        {
+          "turn": 4,
+          "churn": 0.2360333080999243
+        },
+        {
+          "turn": 5,
+          "churn": 0.42779173525080133
+        },
+        {
+          "turn": 6,
+          "churn": 0.16038696537678207
+        },
+        {
+          "turn": 7,
+          "churn": 0.27050833068025043
+        },
+        {
+          "turn": 8,
+          "churn": 0.10538308174309313
+        },
+        {
+          "turn": 9,
+          "churn": 0.1961996336996337
+        },
+        {
+          "turn": 10,
+          "churn": 0.8721069433359936
+        },
+        {
+          "turn": 11,
+          "churn": 0.4667517821044792
+        },
+        {
+          "turn": 12,
+          "churn": 0.14133016627078385
+        },
+        {
+          "turn": 13,
+          "churn": 0.12305720237141483
+        },
+        {
+          "turn": 14,
+          "churn": 0.26585107634395955
+        },
+        {
+          "turn": 15,
+          "churn": 0.0884134898933033
+        },
+        {
+          "turn": 16,
+          "churn": 0.08344390387734041
+        },
+        {
+          "turn": 17,
+          "churn": 0.18811841685285668
+        },
+        {
+          "turn": 18,
+          "churn": 0.15830478877023305
+        },
+        {
+          "turn": 19,
+          "churn": 0.8726152623211447
+        },
+        {
+          "turn": 20,
+          "churn": 0.3068870523415978
+        },
+        {
+          "turn": 21,
+          "churn": 0.3862022319918837
+        },
+        {
+          "turn": 22,
+          "churn": 0.29271063804341324
+        },
+        {
+          "turn": 23,
+          "churn": 0.22135307538296783
+        },
+        {
+          "turn": 24,
+          "churn": 0.1863848164564155
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_7",
+          "sample_label": "P7",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 3,
+          "step": 0,
+          "A": 471.0,
+          "B1": 27138.0,
+          "B2": 1331.0,
+          "C1": 3074.0,
+          "B2_C1": 4405.0,
+          "pre_prompt_tokens": 30683.0,
+          "post_prompt_tokens": 4876.0,
+          "semi_prefill_ms": 680.75,
+          "summary_prefill_ms": 4070.7,
+          "summary_decode_ms": 15972.0,
+          "summary_generation_time_s": 59.771,
+          "token_saving_pct": 84.1084639702767
+        },
+        {
+          "sample_id": "puzzle_7",
+          "sample_label": "P7",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 10,
+          "step": 0,
+          "A": 471.0,
+          "B1": 27598.0,
+          "B2": 1297.0,
+          "C1": 3074.0,
+          "B2_C1": 4371.0,
+          "pre_prompt_tokens": 31143.0,
+          "post_prompt_tokens": 4842.0,
+          "semi_prefill_ms": 675.65,
+          "summary_prefill_ms": 4139.7,
+          "summary_decode_ms": 15564.0,
+          "summary_generation_time_s": 87.3,
+          "token_saving_pct": 84.45236489740873
+        },
+        {
+          "sample_id": "puzzle_7",
+          "sample_label": "P7",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 19,
+          "step": 0,
+          "A": 471.0,
+          "B1": 30376.0,
+          "B2": 1317.0,
+          "C1": 3074.0,
+          "B2_C1": 4391.0,
+          "pre_prompt_tokens": 33922.0,
+          "post_prompt_tokens": 4862.0,
+          "semi_prefill_ms": 678.65,
+          "summary_prefill_ms": 4556.4,
+          "summary_decode_ms": 15804.0,
+          "summary_generation_time_s": 102.66,
+          "token_saving_pct": 85.66711868403985
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3272.2999999999997,
+        "incremental_prefill_ms": 11276.400000000001,
+        "semi_prefill_ms": 2035.0500000000002,
+        "decode_ms": 1089804.0,
+        "total_ms": 1106387.75
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3272.2999999999997,
+        "incremental_prefill_ms": 11276.400000000001,
+        "semi_prefill_ms": 2035.0500000000002,
+        "summary_prefill_ms": 12766.8,
+        "summary_decode_ms": 47340.0,
+        "decode_ms": 1089804.0,
+        "total_ms": 1166494.55
+      },
+      "baseline_ms": 1104352.7,
+      "async_overhead_pct": 0.18427536782406564,
+      "sync_overhead_pct": 5.626993079294324
+    },
+    {
+      "sample_id": "puzzle_8",
+      "sample_label": "P8",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 4,
+      "compression_rate": 0.16,
+      "first_context": 21695.0,
+      "max_context": 30176.0,
+      "accumulated_context": 446226.0,
+      "context_multiplier": 20.568149343166628,
+      "output_tokens": 96129.0,
+      "timing_total_ms": 2960618.389999999,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 40,
+        "semi_prefill": 8
+      },
+      "delta_median": 4675.0,
+      "delta_mean": 3781.85,
+      "delta_min": 986.0,
+      "delta_max": 5351.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21695.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22681.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 26998.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 5057.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 9665.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 11330.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 16238.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 18306.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 20496.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 25434.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 30176.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 6161.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 8262.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 10485.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 15393.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 20261.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 25301.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 5056.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 9812.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 14631.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 19451.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 24802.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 5040.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 9494.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 11369.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.04347251003042194
+        },
+        {
+          "turn": 2,
+          "churn": 0.15990073338765834
+        },
+        {
+          "turn": 3,
+          "churn": 0.8706743128336959
+        },
+        {
+          "turn": 4,
+          "churn": 0.4767718572167615
+        },
+        {
+          "turn": 5,
+          "churn": 0.146954986760812
+        },
+        {
+          "turn": 6,
+          "churn": 0.30225397216405964
+        },
+        {
+          "turn": 7,
+          "churn": 0.11296842565279143
+        },
+        {
+          "turn": 8,
+          "churn": 0.10685011709601873
+        },
+        {
+          "turn": 9,
+          "churn": 0.19414956357631516
+        },
+        {
+          "turn": 10,
+          "churn": 0.15714475079533405
+        },
+        {
+          "turn": 11,
+          "churn": 0.8931991559811718
+        },
+        {
+          "turn": 12,
+          "churn": 0.2542967804405713
+        },
+        {
+          "turn": 13,
+          "churn": 0.21201716738197424
+        },
+        {
+          "turn": 14,
+          "churn": 0.3188462288053011
+        },
+        {
+          "turn": 15,
+          "churn": 0.2402645476531267
+        },
+        {
+          "turn": 16,
+          "churn": 0.19920161258448282
+        },
+        {
+          "turn": 17,
+          "churn": 0.8706487341772152
+        },
+        {
+          "turn": 18,
+          "churn": 0.48471259682022017
+        },
+        {
+          "turn": 19,
+          "churn": 0.32936914770008885
+        },
+        {
+          "turn": 20,
+          "churn": 0.24780216955426457
+        },
+        {
+          "turn": 21,
+          "churn": 0.21574872994113378
+        },
+        {
+          "turn": 22,
+          "churn": 0.8702380952380953
+        },
+        {
+          "turn": 23,
+          "churn": 0.4691384032020223
+        },
+        {
+          "turn": 24,
+          "churn": 0.16492215674201777
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_8",
+          "sample_label": "P8",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 3,
+          "step": 0,
+          "A": 484.0,
+          "B1": 27586.0,
+          "B2": 1329.0,
+          "C1": 3074.0,
+          "B2_C1": 4403.0,
+          "pre_prompt_tokens": 31144.0,
+          "post_prompt_tokens": 4887.0,
+          "semi_prefill_ms": 680.4499999999999,
+          "summary_prefill_ms": 4137.9,
+          "summary_decode_ms": 15948.0,
+          "summary_generation_time_s": 96.997,
+          "token_saving_pct": 84.30837400462369
+        },
+        {
+          "sample_id": "puzzle_8",
+          "sample_label": "P8",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 11,
+          "step": 0,
+          "A": 484.0,
+          "B1": 26409.0,
+          "B2": 1322.0,
+          "C1": 4181.0,
+          "B2_C1": 5503.0,
+          "pre_prompt_tokens": 31074.0,
+          "post_prompt_tokens": 5987.0,
+          "semi_prefill_ms": 845.4499999999999,
+          "summary_prefill_ms": 3961.35,
+          "summary_decode_ms": 15864.0,
+          "summary_generation_time_s": 100.692,
+          "token_saving_pct": 80.73308875587307
+        },
+        {
+          "sample_id": "puzzle_8",
+          "sample_label": "P8",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 17,
+          "step": 0,
+          "A": 484.0,
+          "B1": 26471.0,
+          "B2": 1328.0,
+          "C1": 3074.0,
+          "B2_C1": 4402.0,
+          "pre_prompt_tokens": 30029.0,
+          "post_prompt_tokens": 4886.0,
+          "semi_prefill_ms": 680.3,
+          "summary_prefill_ms": 3970.6499999999996,
+          "summary_decode_ms": 15936.0,
+          "summary_generation_time_s": 100.77,
+          "token_saving_pct": 83.7290619068234
+        },
+        {
+          "sample_id": "puzzle_8",
+          "sample_label": "P8",
+          "run_name": "compressed",
+          "event": 4,
+          "turn": 22,
+          "step": 0,
+          "A": 484.0,
+          "B1": 26517.0,
+          "B2": 1312.0,
+          "C1": 3074.0,
+          "B2_C1": 4386.0,
+          "pre_prompt_tokens": 30075.0,
+          "post_prompt_tokens": 4870.0,
+          "semi_prefill_ms": 677.9,
+          "summary_prefill_ms": 3977.5499999999997,
+          "summary_decode_ms": 15744.0,
+          "summary_generation_time_s": 100.485,
+          "token_saving_pct": 83.80714879467996
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3274.25,
+        "incremental_prefill_ms": 11745.55,
+        "semi_prefill_ms": 2884.1,
+        "decode_ms": 1153548.0,
+        "total_ms": 1171451.9000000001
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3274.25,
+        "incremental_prefill_ms": 11745.55,
+        "semi_prefill_ms": 2884.1,
+        "summary_prefill_ms": 16047.449999999999,
+        "summary_decode_ms": 63492.0,
+        "decode_ms": 1153548.0,
+        "total_ms": 1250991.35
+      },
+      "baseline_ms": 1168567.8,
+      "async_overhead_pct": 0.2468063898389122,
+      "sync_overhead_pct": 7.053381926149258
+    },
+    {
+      "sample_id": "puzzle_9",
+      "sample_label": "P9",
+      "run_name": "compressed",
+      "active": true,
+      "rounds": 25,
+      "steps": 50,
+      "n_compressions": 4,
+      "compression_rate": 0.16,
+      "first_context": 21679.0,
+      "max_context": 28925.0,
+      "accumulated_context": 467365.0,
+      "context_multiplier": 21.55842059135569,
+      "output_tokens": 102306.0,
+      "timing_total_ms": 3151870.63,
+      "classification_counts": {
+        "full_prefill": 2,
+        "incremental": 40,
+        "semi_prefill": 8
+      },
+      "delta_median": 4908.5,
+      "delta_mean": 3992.2,
+      "delta_min": 1027.0,
+      "delta_max": 5161.0,
+      "context_series": [
+        {
+          "turn": 0,
+          "prompt_tokens": 21679.0
+        },
+        {
+          "turn": 1,
+          "prompt_tokens": 22706.0
+        },
+        {
+          "turn": 2,
+          "prompt_tokens": 26957.0
+        },
+        {
+          "turn": 3,
+          "prompt_tokens": 28434.0
+        },
+        {
+          "turn": 4,
+          "prompt_tokens": 5042.0
+        },
+        {
+          "turn": 5,
+          "prompt_tokens": 6765.0
+        },
+        {
+          "turn": 6,
+          "prompt_tokens": 11392.0
+        },
+        {
+          "turn": 7,
+          "prompt_tokens": 16530.0
+        },
+        {
+          "turn": 8,
+          "prompt_tokens": 21294.0
+        },
+        {
+          "turn": 9,
+          "prompt_tokens": 23786.0
+        },
+        {
+          "turn": 10,
+          "prompt_tokens": 28925.0
+        },
+        {
+          "turn": 11,
+          "prompt_tokens": 5035.0
+        },
+        {
+          "turn": 12,
+          "prompt_tokens": 6656.0
+        },
+        {
+          "turn": 13,
+          "prompt_tokens": 11709.0
+        },
+        {
+          "turn": 14,
+          "prompt_tokens": 16870.0
+        },
+        {
+          "turn": 15,
+          "prompt_tokens": 21972.0
+        },
+        {
+          "turn": 16,
+          "prompt_tokens": 27077.0
+        },
+        {
+          "turn": 17,
+          "prompt_tokens": 5030.0
+        },
+        {
+          "turn": 18,
+          "prompt_tokens": 9679.0
+        },
+        {
+          "turn": 19,
+          "prompt_tokens": 11903.0
+        },
+        {
+          "turn": 20,
+          "prompt_tokens": 16972.0
+        },
+        {
+          "turn": 21,
+          "prompt_tokens": 22032.0
+        },
+        {
+          "turn": 22,
+          "prompt_tokens": 27104.0
+        },
+        {
+          "turn": 23,
+          "prompt_tokens": 5327.0
+        },
+        {
+          "turn": 24,
+          "prompt_tokens": 10417.0
+        }
+      ],
+      "churn_series": [
+        {
+          "turn": 0,
+          "churn": 1.0
+        },
+        {
+          "turn": 1,
+          "churn": 0.04523033559411609
+        },
+        {
+          "turn": 2,
+          "churn": 0.15769558927180324
+        },
+        {
+          "turn": 3,
+          "churn": 0.05194485475135401
+        },
+        {
+          "turn": 4,
+          "churn": 0.8734629115430385
+        },
+        {
+          "turn": 5,
+          "churn": 0.25469327420546933
+        },
+        {
+          "turn": 6,
+          "churn": 0.4061622191011236
+        },
+        {
+          "turn": 7,
+          "churn": 0.31082879612825165
+        },
+        {
+          "turn": 8,
+          "churn": 0.22372499295576218
+        },
+        {
+          "turn": 9,
+          "churn": 0.10476751030017657
+        },
+        {
+          "turn": 10,
+          "churn": 0.17766637856525497
+        },
+        {
+          "turn": 11,
+          "churn": 0.873286991062562
+        },
+        {
+          "turn": 12,
+          "churn": 0.24353966346153846
+        },
+        {
+          "turn": 13,
+          "churn": 0.4315483815868136
+        },
+        {
+          "turn": 14,
+          "churn": 0.30592768227623
+        },
+        {
+          "turn": 15,
+          "churn": 0.23220462406699435
+        },
+        {
+          "turn": 16,
+          "churn": 0.1885363962034199
+        },
+        {
+          "turn": 17,
+          "churn": 0.8731610337972167
+        },
+        {
+          "turn": 18,
+          "churn": 0.48031821469160035
+        },
+        {
+          "turn": 19,
+          "churn": 0.18684365286062338
+        },
+        {
+          "turn": 20,
+          "churn": 0.29866839500353526
+        },
+        {
+          "turn": 21,
+          "churn": 0.22966594045025418
+        },
+        {
+          "turn": 22,
+          "churn": 0.1871310507674144
+        },
+        {
+          "turn": 23,
+          "churn": 0.8796696076590952
+        },
+        {
+          "turn": 24,
+          "churn": 0.48862436402035136
+        }
+      ],
+      "events": [
+        {
+          "sample_id": "puzzle_9",
+          "sample_label": "P9",
+          "run_name": "compressed",
+          "event": 1,
+          "turn": 4,
+          "step": 0,
+          "A": 468.0,
+          "B1": 28908.0,
+          "B2": 1330.0,
+          "C1": 3074.0,
+          "B2_C1": 4404.0,
+          "pre_prompt_tokens": 32450.0,
+          "post_prompt_tokens": 4872.0,
+          "semi_prefill_ms": 680.6,
+          "summary_prefill_ms": 4336.2,
+          "summary_decode_ms": 15960.0,
+          "summary_generation_time_s": 78.223,
+          "token_saving_pct": 84.98613251155625
+        },
+        {
+          "sample_id": "puzzle_9",
+          "sample_label": "P9",
+          "run_name": "compressed",
+          "event": 2,
+          "turn": 11,
+          "step": 0,
+          "A": 468.0,
+          "B1": 29917.0,
+          "B2": 1323.0,
+          "C1": 3074.0,
+          "B2_C1": 4397.0,
+          "pre_prompt_tokens": 33459.0,
+          "post_prompt_tokens": 4865.0,
+          "semi_prefill_ms": 679.55,
+          "summary_prefill_ms": 4487.55,
+          "summary_decode_ms": 15876.0,
+          "summary_generation_time_s": 132.823,
+          "token_saving_pct": 85.45981649182582
+        },
+        {
+          "sample_id": "puzzle_9",
+          "sample_label": "P9",
+          "run_name": "compressed",
+          "event": 3,
+          "turn": 17,
+          "step": 0,
+          "A": 468.0,
+          "B1": 28702.0,
+          "B2": 1318.0,
+          "C1": 3074.0,
+          "B2_C1": 4392.0,
+          "pre_prompt_tokens": 32244.0,
+          "post_prompt_tokens": 4860.0,
+          "semi_prefill_ms": 678.8,
+          "summary_prefill_ms": 4305.3,
+          "summary_decode_ms": 15816.0,
+          "summary_generation_time_s": 101.688,
+          "token_saving_pct": 84.92742835876442
+        },
+        {
+          "sample_id": "puzzle_9",
+          "sample_label": "P9",
+          "run_name": "compressed",
+          "event": 4,
+          "turn": 23,
+          "step": 0,
+          "A": 468.0,
+          "B1": 26440.0,
+          "B2": 1560.0,
+          "C1": 3126.0,
+          "B2_C1": 4686.0,
+          "pre_prompt_tokens": 30035.0,
+          "post_prompt_tokens": 5154.0,
+          "semi_prefill_ms": 722.9,
+          "summary_prefill_ms": 3966.0,
+          "summary_decode_ms": 18720.0,
+          "summary_generation_time_s": 107.068,
+          "token_saving_pct": 82.84001997669385
+        }
+      ],
+      "config": {
+        "model": "Llama-3.3-70B-Instruct",
+        "context_window": 32000,
+        "threshold": 30000,
+        "reserve_tokens": 2000,
+        "keep_recent_tokens": 2800,
+        "summary_max_tokens": 1024,
+        "source": "/root/agentbench_semi_prefill_bench/config.py"
+      },
+      "score_valid": null,
+      "score": null,
+      "error_type": null,
+      "phase_async": {
+        "full_prefill_ms": 3271.85,
+        "incremental_prefill_ms": 12376.599999999999,
+        "semi_prefill_ms": 2761.85,
+        "decode_ms": 1227672.0,
+        "total_ms": 1246082.3
+      },
+      "phase_sync": {
+        "full_prefill_ms": 3271.85,
+        "incremental_prefill_ms": 12376.599999999999,
+        "semi_prefill_ms": 2761.85,
+        "summary_prefill_ms": 17095.05,
+        "summary_decode_ms": 66372.0,
+        "decode_ms": 1227672.0,
+        "total_ms": 1329549.35
+      },
+      "baseline_ms": 1243320.45,
+      "async_overhead_pct": 0.22213500952228366,
+      "sync_overhead_pct": 6.935372131939115
+    }
+  ],
+  "events": [
+    {
+      "sample_id": "puzzle_0",
+      "sample_label": "P0",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 3,
+      "step": 0,
+      "A": 479.0,
+      "B1": 30106.0,
+      "B2": 1300.0,
+      "C1": 3074.0,
+      "B2_C1": 4374.0,
+      "pre_prompt_tokens": 33659.0,
+      "post_prompt_tokens": 4853.0,
+      "semi_prefill_ms": 676.1,
+      "summary_prefill_ms": 4515.9,
+      "summary_decode_ms": 15600.0,
+      "summary_generation_time_s": 145.708,
+      "token_saving_pct": 85.58186517721857
+    },
+    {
+      "sample_id": "puzzle_0",
+      "sample_label": "P0",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 11,
+      "step": 0,
+      "A": 479.0,
+      "B1": 30368.0,
+      "B2": 1298.0,
+      "C1": 3074.0,
+      "B2_C1": 4372.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4851.0,
+      "semi_prefill_ms": 675.8,
+      "summary_prefill_ms": 4555.2,
+      "summary_decode_ms": 15576.0,
+      "summary_generation_time_s": 284.385,
+      "token_saving_pct": 85.69954601733389
+    },
+    {
+      "sample_id": "puzzle_0",
+      "sample_label": "P0",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 17,
+      "step": 0,
+      "A": 479.0,
+      "B1": 26663.0,
+      "B2": 1304.0,
+      "C1": 3074.0,
+      "B2_C1": 4378.0,
+      "pre_prompt_tokens": 30216.0,
+      "post_prompt_tokens": 4857.0,
+      "semi_prefill_ms": 676.6999999999999,
+      "summary_prefill_ms": 3999.45,
+      "summary_decode_ms": 15648.0,
+      "summary_generation_time_s": 232.446,
+      "token_saving_pct": 83.92573471008737
+    },
+    {
+      "sample_id": "puzzle_1",
+      "sample_label": "P1",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 6,
+      "step": 0,
+      "A": 472.0,
+      "B1": 30375.0,
+      "B2": 1302.0,
+      "C1": 3074.0,
+      "B2_C1": 4376.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4848.0,
+      "semi_prefill_ms": 676.4,
+      "summary_prefill_ms": 4556.25,
+      "summary_decode_ms": 15624.0,
+      "summary_generation_time_s": 83.486,
+      "token_saving_pct": 85.70838983550499
+    },
+    {
+      "sample_id": "puzzle_1",
+      "sample_label": "P1",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 15,
+      "step": 0,
+      "A": 472.0,
+      "B1": 30251.0,
+      "B2": 1310.0,
+      "C1": 3074.0,
+      "B2_C1": 4384.0,
+      "pre_prompt_tokens": 33797.0,
+      "post_prompt_tokens": 4856.0,
+      "semi_prefill_ms": 677.6,
+      "summary_prefill_ms": 4537.65,
+      "summary_decode_ms": 15720.0,
+      "summary_generation_time_s": 133.91,
+      "token_saving_pct": 85.63186081604877
+    },
+    {
+      "sample_id": "puzzle_1",
+      "sample_label": "P1",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 22,
+      "step": 0,
+      "A": 472.0,
+      "B1": 30375.0,
+      "B2": 1308.0,
+      "C1": 3074.0,
+      "B2_C1": 4382.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4854.0,
+      "semi_prefill_ms": 677.3,
+      "summary_prefill_ms": 4556.25,
+      "summary_decode_ms": 15696.0,
+      "summary_generation_time_s": 133.142,
+      "token_saving_pct": 85.69070219916279
+    },
+    {
+      "sample_id": "puzzle_10",
+      "sample_label": "P10",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 6,
+      "step": 0,
+      "A": 472.0,
+      "B1": 30375.0,
+      "B2": 1302.0,
+      "C1": 3074.0,
+      "B2_C1": 4376.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4848.0,
+      "semi_prefill_ms": 676.4,
+      "summary_prefill_ms": 4556.25,
+      "summary_decode_ms": 15624.0,
+      "summary_generation_time_s": 83.486,
+      "token_saving_pct": 85.70838983550499
+    },
+    {
+      "sample_id": "puzzle_10",
+      "sample_label": "P10",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 15,
+      "step": 0,
+      "A": 472.0,
+      "B1": 30251.0,
+      "B2": 1310.0,
+      "C1": 3074.0,
+      "B2_C1": 4384.0,
+      "pre_prompt_tokens": 33797.0,
+      "post_prompt_tokens": 4856.0,
+      "semi_prefill_ms": 677.6,
+      "summary_prefill_ms": 4537.65,
+      "summary_decode_ms": 15720.0,
+      "summary_generation_time_s": 133.91,
+      "token_saving_pct": 85.63186081604877
+    },
+    {
+      "sample_id": "puzzle_10",
+      "sample_label": "P10",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 22,
+      "step": 0,
+      "A": 472.0,
+      "B1": 30375.0,
+      "B2": 1308.0,
+      "C1": 3074.0,
+      "B2_C1": 4382.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4854.0,
+      "semi_prefill_ms": 677.3,
+      "summary_prefill_ms": 4556.25,
+      "summary_decode_ms": 15696.0,
+      "summary_generation_time_s": 133.142,
+      "token_saving_pct": 85.69070219916279
+    },
+    {
+      "sample_id": "puzzle_2",
+      "sample_label": "P2",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 4,
+      "step": 0,
+      "A": 494.0,
+      "B1": 27154.0,
+      "B2": 850.0,
+      "C1": 3074.0,
+      "B2_C1": 3924.0,
+      "pre_prompt_tokens": 30722.0,
+      "post_prompt_tokens": 4418.0,
+      "semi_prefill_ms": 608.6,
+      "summary_prefill_ms": 4073.1,
+      "summary_decode_ms": 10200.0,
+      "summary_generation_time_s": 117.066,
+      "token_saving_pct": 85.6194258186316
+    },
+    {
+      "sample_id": "puzzle_2",
+      "sample_label": "P2",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 10,
+      "step": 0,
+      "A": 494.0,
+      "B1": 29534.0,
+      "B2": 1114.0,
+      "C1": 3074.0,
+      "B2_C1": 4188.0,
+      "pre_prompt_tokens": 33102.0,
+      "post_prompt_tokens": 4682.0,
+      "semi_prefill_ms": 648.1999999999999,
+      "summary_prefill_ms": 4430.099999999999,
+      "summary_decode_ms": 13368.0,
+      "summary_generation_time_s": 292.334,
+      "token_saving_pct": 85.85583952631261
+    },
+    {
+      "sample_id": "puzzle_2",
+      "sample_label": "P2",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 16,
+      "step": 0,
+      "A": 494.0,
+      "B1": 30353.0,
+      "B2": 1332.0,
+      "C1": 3074.0,
+      "B2_C1": 4406.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4900.0,
+      "semi_prefill_ms": 680.9,
+      "summary_prefill_ms": 4552.95,
+      "summary_decode_ms": 15984.0,
+      "summary_generation_time_s": 299.011,
+      "token_saving_pct": 85.55509698720594
+    },
+    {
+      "sample_id": "puzzle_2",
+      "sample_label": "P2",
+      "run_name": "compressed",
+      "event": 4,
+      "turn": 22,
+      "step": 0,
+      "A": 494.0,
+      "B1": 30353.0,
+      "B2": 1337.0,
+      "C1": 3074.0,
+      "B2_C1": 4411.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4905.0,
+      "semi_prefill_ms": 681.65,
+      "summary_prefill_ms": 4552.95,
+      "summary_decode_ms": 16044.0,
+      "summary_generation_time_s": 134.251,
+      "token_saving_pct": 85.54035729025411
+    },
+    {
+      "sample_id": "puzzle_3",
+      "sample_label": "P3",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 5,
+      "step": 0,
+      "A": 498.0,
+      "B1": 27518.0,
+      "B2": 912.0,
+      "C1": 3014.0,
+      "B2_C1": 3926.0,
+      "pre_prompt_tokens": 31030.0,
+      "post_prompt_tokens": 4424.0,
+      "semi_prefill_ms": 608.9,
+      "summary_prefill_ms": 4127.7,
+      "summary_decode_ms": 10944.0,
+      "summary_generation_time_s": 44.593,
+      "token_saving_pct": 85.74282951981954
+    },
+    {
+      "sample_id": "puzzle_3",
+      "sample_label": "P3",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 13,
+      "step": 0,
+      "A": 498.0,
+      "B1": 28043.0,
+      "B2": 1275.0,
+      "C1": 3074.0,
+      "B2_C1": 4349.0,
+      "pre_prompt_tokens": 31615.0,
+      "post_prompt_tokens": 4847.0,
+      "semi_prefill_ms": 672.35,
+      "summary_prefill_ms": 4206.45,
+      "summary_decode_ms": 15300.0,
+      "summary_generation_time_s": 89.519,
+      "token_saving_pct": 84.66866993515735
+    },
+    {
+      "sample_id": "puzzle_3",
+      "sample_label": "P3",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 21,
+      "step": 0,
+      "A": 498.0,
+      "B1": 27720.0,
+      "B2": 1298.0,
+      "C1": 3074.0,
+      "B2_C1": 4372.0,
+      "pre_prompt_tokens": 31292.0,
+      "post_prompt_tokens": 4870.0,
+      "semi_prefill_ms": 675.8,
+      "summary_prefill_ms": 4158.0,
+      "summary_decode_ms": 15576.0,
+      "summary_generation_time_s": 133.637,
+      "token_saving_pct": 84.43691678384252
+    },
+    {
+      "sample_id": "puzzle_4",
+      "sample_label": "P4",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 6,
+      "step": 0,
+      "A": 504.0,
+      "B1": 29437.0,
+      "B2": 1135.0,
+      "C1": 3074.0,
+      "B2_C1": 4209.0,
+      "pre_prompt_tokens": 33015.0,
+      "post_prompt_tokens": 4713.0,
+      "semi_prefill_ms": 651.35,
+      "summary_prefill_ms": 4415.55,
+      "summary_decode_ms": 13620.0,
+      "summary_generation_time_s": 62.837,
+      "token_saving_pct": 85.72467060427078
+    },
+    {
+      "sample_id": "puzzle_4",
+      "sample_label": "P4",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 14,
+      "step": 0,
+      "A": 504.0,
+      "B1": 27608.0,
+      "B2": 1330.0,
+      "C1": 2155.0,
+      "B2_C1": 3485.0,
+      "pre_prompt_tokens": 30267.0,
+      "post_prompt_tokens": 3989.0,
+      "semi_prefill_ms": 542.75,
+      "summary_prefill_ms": 4141.2,
+      "summary_decode_ms": 15960.0,
+      "summary_generation_time_s": 99.86,
+      "token_saving_pct": 86.82062972874748
+    },
+    {
+      "sample_id": "puzzle_4",
+      "sample_label": "P4",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 20,
+      "step": 0,
+      "A": 504.0,
+      "B1": 30343.0,
+      "B2": 1343.0,
+      "C1": 3074.0,
+      "B2_C1": 4417.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4921.0,
+      "semi_prefill_ms": 682.55,
+      "summary_prefill_ms": 4551.45,
+      "summary_decode_ms": 16116.0,
+      "summary_generation_time_s": 187.399,
+      "token_saving_pct": 85.49319026000826
+    },
+    {
+      "sample_id": "puzzle_5",
+      "sample_label": "P5",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 4,
+      "step": 0,
+      "A": 481.0,
+      "B1": 30190.0,
+      "B2": 883.0,
+      "C1": 3074.0,
+      "B2_C1": 3957.0,
+      "pre_prompt_tokens": 33745.0,
+      "post_prompt_tokens": 4438.0,
+      "semi_prefill_ms": 613.55,
+      "summary_prefill_ms": 4528.5,
+      "summary_decode_ms": 10596.0,
+      "summary_generation_time_s": 48.062,
+      "token_saving_pct": 86.84842198844274
+    },
+    {
+      "sample_id": "puzzle_5",
+      "sample_label": "P5",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 10,
+      "step": 0,
+      "A": 481.0,
+      "B1": 28187.0,
+      "B2": 1301.0,
+      "C1": 3074.0,
+      "B2_C1": 4375.0,
+      "pre_prompt_tokens": 31742.0,
+      "post_prompt_tokens": 4856.0,
+      "semi_prefill_ms": 676.25,
+      "summary_prefill_ms": 4228.05,
+      "summary_decode_ms": 15612.0,
+      "summary_generation_time_s": 86.525,
+      "token_saving_pct": 84.70165711045303
+    },
+    {
+      "sample_id": "puzzle_5",
+      "sample_label": "P5",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 16,
+      "step": 0,
+      "A": 481.0,
+      "B1": 29417.0,
+      "B2": 1320.0,
+      "C1": 3074.0,
+      "B2_C1": 4394.0,
+      "pre_prompt_tokens": 32972.0,
+      "post_prompt_tokens": 4875.0,
+      "semi_prefill_ms": 679.1,
+      "summary_prefill_ms": 4412.55,
+      "summary_decode_ms": 15840.0,
+      "summary_generation_time_s": 132.622,
+      "token_saving_pct": 85.21472764770108
+    },
+    {
+      "sample_id": "puzzle_5",
+      "sample_label": "P5",
+      "run_name": "compressed",
+      "event": 4,
+      "turn": 22,
+      "step": 0,
+      "A": 481.0,
+      "B1": 30099.0,
+      "B2": 1319.0,
+      "C1": 3074.0,
+      "B2_C1": 4393.0,
+      "pre_prompt_tokens": 33654.0,
+      "post_prompt_tokens": 4874.0,
+      "semi_prefill_ms": 678.9499999999999,
+      "summary_prefill_ms": 4514.849999999999,
+      "summary_decode_ms": 15828.0,
+      "summary_generation_time_s": 132.813,
+      "token_saving_pct": 85.51732334937897
+    },
+    {
+      "sample_id": "puzzle_6",
+      "sample_label": "P6",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 5,
+      "step": 0,
+      "A": 479.0,
+      "B1": 26338.0,
+      "B2": 834.0,
+      "C1": 4243.0,
+      "B2_C1": 5077.0,
+      "pre_prompt_tokens": 31060.0,
+      "post_prompt_tokens": 5556.0,
+      "semi_prefill_ms": 781.55,
+      "summary_prefill_ms": 3950.7,
+      "summary_decode_ms": 10008.0,
+      "summary_generation_time_s": 41.297,
+      "token_saving_pct": 82.1120412105602
+    },
+    {
+      "sample_id": "puzzle_6",
+      "sample_label": "P6",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 14,
+      "step": 0,
+      "A": 479.0,
+      "B1": 28808.0,
+      "B2": 1237.0,
+      "C1": 3074.0,
+      "B2_C1": 4311.0,
+      "pre_prompt_tokens": 32361.0,
+      "post_prompt_tokens": 4790.0,
+      "semi_prefill_ms": 666.65,
+      "summary_prefill_ms": 4321.2,
+      "summary_decode_ms": 14844.0,
+      "summary_generation_time_s": 111.104,
+      "token_saving_pct": 85.19823244028306
+    },
+    {
+      "sample_id": "puzzle_6",
+      "sample_label": "P6",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 20,
+      "step": 0,
+      "A": 479.0,
+      "B1": 27059.0,
+      "B2": 1302.0,
+      "C1": 3074.0,
+      "B2_C1": 4376.0,
+      "pre_prompt_tokens": 30612.0,
+      "post_prompt_tokens": 4855.0,
+      "semi_prefill_ms": 676.4,
+      "summary_prefill_ms": 4058.85,
+      "summary_decode_ms": 15624.0,
+      "summary_generation_time_s": 131.636,
+      "token_saving_pct": 84.14020645498498
+    },
+    {
+      "sample_id": "puzzle_7",
+      "sample_label": "P7",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 3,
+      "step": 0,
+      "A": 471.0,
+      "B1": 27138.0,
+      "B2": 1331.0,
+      "C1": 3074.0,
+      "B2_C1": 4405.0,
+      "pre_prompt_tokens": 30683.0,
+      "post_prompt_tokens": 4876.0,
+      "semi_prefill_ms": 680.75,
+      "summary_prefill_ms": 4070.7,
+      "summary_decode_ms": 15972.0,
+      "summary_generation_time_s": 59.771,
+      "token_saving_pct": 84.1084639702767
+    },
+    {
+      "sample_id": "puzzle_7",
+      "sample_label": "P7",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 10,
+      "step": 0,
+      "A": 471.0,
+      "B1": 27598.0,
+      "B2": 1297.0,
+      "C1": 3074.0,
+      "B2_C1": 4371.0,
+      "pre_prompt_tokens": 31143.0,
+      "post_prompt_tokens": 4842.0,
+      "semi_prefill_ms": 675.65,
+      "summary_prefill_ms": 4139.7,
+      "summary_decode_ms": 15564.0,
+      "summary_generation_time_s": 87.3,
+      "token_saving_pct": 84.45236489740873
+    },
+    {
+      "sample_id": "puzzle_7",
+      "sample_label": "P7",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 19,
+      "step": 0,
+      "A": 471.0,
+      "B1": 30376.0,
+      "B2": 1317.0,
+      "C1": 3074.0,
+      "B2_C1": 4391.0,
+      "pre_prompt_tokens": 33922.0,
+      "post_prompt_tokens": 4862.0,
+      "semi_prefill_ms": 678.65,
+      "summary_prefill_ms": 4556.4,
+      "summary_decode_ms": 15804.0,
+      "summary_generation_time_s": 102.66,
+      "token_saving_pct": 85.66711868403985
+    },
+    {
+      "sample_id": "puzzle_8",
+      "sample_label": "P8",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 3,
+      "step": 0,
+      "A": 484.0,
+      "B1": 27586.0,
+      "B2": 1329.0,
+      "C1": 3074.0,
+      "B2_C1": 4403.0,
+      "pre_prompt_tokens": 31144.0,
+      "post_prompt_tokens": 4887.0,
+      "semi_prefill_ms": 680.4499999999999,
+      "summary_prefill_ms": 4137.9,
+      "summary_decode_ms": 15948.0,
+      "summary_generation_time_s": 96.997,
+      "token_saving_pct": 84.30837400462369
+    },
+    {
+      "sample_id": "puzzle_8",
+      "sample_label": "P8",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 11,
+      "step": 0,
+      "A": 484.0,
+      "B1": 26409.0,
+      "B2": 1322.0,
+      "C1": 4181.0,
+      "B2_C1": 5503.0,
+      "pre_prompt_tokens": 31074.0,
+      "post_prompt_tokens": 5987.0,
+      "semi_prefill_ms": 845.4499999999999,
+      "summary_prefill_ms": 3961.35,
+      "summary_decode_ms": 15864.0,
+      "summary_generation_time_s": 100.692,
+      "token_saving_pct": 80.73308875587307
+    },
+    {
+      "sample_id": "puzzle_8",
+      "sample_label": "P8",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 17,
+      "step": 0,
+      "A": 484.0,
+      "B1": 26471.0,
+      "B2": 1328.0,
+      "C1": 3074.0,
+      "B2_C1": 4402.0,
+      "pre_prompt_tokens": 30029.0,
+      "post_prompt_tokens": 4886.0,
+      "semi_prefill_ms": 680.3,
+      "summary_prefill_ms": 3970.6499999999996,
+      "summary_decode_ms": 15936.0,
+      "summary_generation_time_s": 100.77,
+      "token_saving_pct": 83.7290619068234
+    },
+    {
+      "sample_id": "puzzle_8",
+      "sample_label": "P8",
+      "run_name": "compressed",
+      "event": 4,
+      "turn": 22,
+      "step": 0,
+      "A": 484.0,
+      "B1": 26517.0,
+      "B2": 1312.0,
+      "C1": 3074.0,
+      "B2_C1": 4386.0,
+      "pre_prompt_tokens": 30075.0,
+      "post_prompt_tokens": 4870.0,
+      "semi_prefill_ms": 677.9,
+      "summary_prefill_ms": 3977.5499999999997,
+      "summary_decode_ms": 15744.0,
+      "summary_generation_time_s": 100.485,
+      "token_saving_pct": 83.80714879467996
+    },
+    {
+      "sample_id": "puzzle_9",
+      "sample_label": "P9",
+      "run_name": "compressed",
+      "event": 1,
+      "turn": 4,
+      "step": 0,
+      "A": 468.0,
+      "B1": 28908.0,
+      "B2": 1330.0,
+      "C1": 3074.0,
+      "B2_C1": 4404.0,
+      "pre_prompt_tokens": 32450.0,
+      "post_prompt_tokens": 4872.0,
+      "semi_prefill_ms": 680.6,
+      "summary_prefill_ms": 4336.2,
+      "summary_decode_ms": 15960.0,
+      "summary_generation_time_s": 78.223,
+      "token_saving_pct": 84.98613251155625
+    },
+    {
+      "sample_id": "puzzle_9",
+      "sample_label": "P9",
+      "run_name": "compressed",
+      "event": 2,
+      "turn": 11,
+      "step": 0,
+      "A": 468.0,
+      "B1": 29917.0,
+      "B2": 1323.0,
+      "C1": 3074.0,
+      "B2_C1": 4397.0,
+      "pre_prompt_tokens": 33459.0,
+      "post_prompt_tokens": 4865.0,
+      "semi_prefill_ms": 679.55,
+      "summary_prefill_ms": 4487.55,
+      "summary_decode_ms": 15876.0,
+      "summary_generation_time_s": 132.823,
+      "token_saving_pct": 85.45981649182582
+    },
+    {
+      "sample_id": "puzzle_9",
+      "sample_label": "P9",
+      "run_name": "compressed",
+      "event": 3,
+      "turn": 17,
+      "step": 0,
+      "A": 468.0,
+      "B1": 28702.0,
+      "B2": 1318.0,
+      "C1": 3074.0,
+      "B2_C1": 4392.0,
+      "pre_prompt_tokens": 32244.0,
+      "post_prompt_tokens": 4860.0,
+      "semi_prefill_ms": 678.8,
+      "summary_prefill_ms": 4305.3,
+      "summary_decode_ms": 15816.0,
+      "summary_generation_time_s": 101.688,
+      "token_saving_pct": 84.92742835876442
+    },
+    {
+      "sample_id": "puzzle_9",
+      "sample_label": "P9",
+      "run_name": "compressed",
+      "event": 4,
+      "turn": 23,
+      "step": 0,
+      "A": 468.0,
+      "B1": 26440.0,
+      "B2": 1560.0,
+      "C1": 3126.0,
+      "B2_C1": 4686.0,
+      "pre_prompt_tokens": 30035.0,
+      "post_prompt_tokens": 5154.0,
+      "semi_prefill_ms": 722.9,
+      "summary_prefill_ms": 3966.0,
+      "summary_decode_ms": 18720.0,
+      "summary_generation_time_s": 107.068,
+      "token_saving_pct": 82.84001997669385
+    }
+  ]
+}
